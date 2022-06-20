@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/paradigma-test/static/css/main.5d2cf873.css",
-    "main.js": "/paradigma-test/static/js/main.723a46ae.js",
+    "main.css": "/paradigma-test/static/css/main.e888a053.css",
+    "main.js": "/paradigma-test/static/js/main.7dfbc818.js",
     "static/media/bg.jpg": "/paradigma-test/static/media/bg.7a7a23a5746ef5bdb88c.jpg",
     "static/media/Montserrat-Bold.woff": "/paradigma-test/static/media/Montserrat-Bold.180ba33d8de7dcfe80a0.woff",
     "static/media/Montserrat-Regular.woff": "/paradigma-test/static/media/Montserrat-Regular.3db65dc4b858f0fed4fb.woff",
@@ -14,17 +14,18 @@
     "static/media/Montserrat-SemiBold.woff2": "/paradigma-test/static/media/Montserrat-SemiBold.1d679c8257a6a9caa9bd.woff2",
     "static/media/Montserrat-Light.woff2": "/paradigma-test/static/media/Montserrat-Light.cf7b6a954e570df2f420.woff2",
     "static/media/logo.png": "/paradigma-test/static/media/logo.0408d9042c4235af8b61.png",
+    "static/media/click.svg": "/paradigma-test/static/media/click.db99a6a1bd1c1aaa441a.svg",
     "static/media/viber.svg": "/paradigma-test/static/media/viber.523d565ca1f56329d5b7.svg",
     "static/media/whatsapp.svg": "/paradigma-test/static/media/whatsapp.04043800fc78093a8798.svg",
     "index.html": "/paradigma-test/index.html",
     "static/media/home.svg": "/paradigma-test/static/media/home.04fd938299c07eeb048b.svg",
     "static/media/telegram.svg": "/paradigma-test/static/media/telegram.c7e14948d7feba86b93a.svg",
     "static/media/arrow.svg": "/paradigma-test/static/media/arrow.ea54e3ccae61a36c993a.svg",
-    "main.5d2cf873.css.map": "/paradigma-test/static/css/main.5d2cf873.css.map",
-    "main.723a46ae.js.map": "/paradigma-test/static/js/main.723a46ae.js.map"
+    "main.e888a053.css.map": "/paradigma-test/static/css/main.e888a053.css.map",
+    "main.7dfbc818.js.map": "/paradigma-test/static/js/main.7dfbc818.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d2cf873.css",
-    "static/js/main.723a46ae.js"
+    "static/css/main.e888a053.css",
+    "static/js/main.7dfbc818.js"
   ]
 }
