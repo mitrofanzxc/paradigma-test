@@ -73,7 +73,7 @@
 }
 
 .modal__list-item {
-  @include poppins;
+  @include montserrat;
   margin-top: $base * 2;
   font-size: $base * 3;
   font-weight: $fw-bold;
@@ -89,7 +89,7 @@
 }
 
 .modal__list-item-span {
-  @include poppins;
+  @include montserrat;
   position: relative;
   margin-left: $base;
   font-size: $base * 3;

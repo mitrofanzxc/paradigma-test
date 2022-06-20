@@ -7,7 +7,6 @@
 }
 
 .avatar__wrapper {
-  @include disableSelection;
   position: relative;
   z-index: 2;
   display: flex;
@@ -49,7 +48,6 @@
   font-weight: $fw-semi-bold;
   letter-spacing: 0.125rem;
   line-height: $base * 5;
-  @include disableSelection;
 
   @media (max-width: $breakpoint-sm-min) {
     font-size: calc(0.5em + 1.5vw);

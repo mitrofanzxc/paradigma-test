@@ -17,24 +17,16 @@
 
 // === / FONTS ===
 
-html,
 body {
-  @include poppins;
+  @include montserrat;
+  @include scroll;
   position: relative;
   width: 100%;
-  background-color: $color-dark;
-  color: $color-white;
-  scroll-behavior: smooth;
-}
-
-.body {
-  @include scroll;
-  transition: $transition-01;
-}
-
-.body-light {
-  background-color: $color-white;
+  background-image: url('./images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   color: $color-dark;
+  scroll-behavior: smooth;
   transition: $transition-01;
 }
 
@@ -49,23 +41,9 @@ body {
   list-style-type: none;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-}
-
-.main {
-  flex-grow: 1;
-
-  @media (max-width: $breakpoint-md-min) {
-    padding-bottom: $base * 12;
-  }
-}
-
 .wrapper {
-  display: flex;
-  width: 80%;
-  max-width: $base * 288;
+  width: 82%;
+  max-width: $base * 314;
   margin: 0 auto;
 
   @media (max-width: $breakpoint-lg-min) {
@@ -74,19 +52,18 @@ body {
 }
 
 .h1 {
-  @include poppins;
+  @include montserrat;
   margin: 0;
   padding: 0;
   font-size: calc(1.5em + 4vw);
   color: $color-orange;
   text-align: center;
   text-transform: uppercase;
-  @include disableSelection;
   transition: $transition-01;
 }
 
 .h2 {
-  @include poppins;
+  @include montserrat;
   position: relative;
   z-index: 2;
   margin: 0;
@@ -96,16 +73,11 @@ body {
   letter-spacing: 0.125rem;
   text-align: center;
   text-transform: uppercase;
-  @include disableSelection;
   transition: $transition-01;
-
-  span {
-    color: $color-orange;
-  }
 }
 
 .h3 {
-  @include poppins;
+  @include montserrat;
   margin: 0;
   padding: 0;
   font-size: $fs-xl;
@@ -113,17 +85,11 @@ body {
   color: $color-white;
   text-align: center;
   text-transform: uppercase;
-  @include disableSelection;
-  transition: $transition-01;
-}
-
-.h3-light {
-  color: $color-dark;
   transition: $transition-01;
 }
 
 .h4 {
-  @include poppins;
+  @include montserrat;
   margin: 0;
   padding: 0;
   font-size: $fs-m;
@@ -142,6 +108,14 @@ a {
   transition: $transition-01;
 }
 
-.color-orange {
-  color: $color-orange;
+.semi-bold {
+  padding-bottom: $base;
+  font-size: $fs-xs;
+  font-weight: $fw-semi-bold;
+  letter-spacing: 0.04em;
+  border-bottom: 0.125rem dotted $color-green;
+}
+
+.bold {
+  font-weight: $fw-bold;
 }

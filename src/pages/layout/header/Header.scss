@@ -1,108 +1,62 @@
 @import '../../../sass/Constants.scss';
 
 .header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  z-index: 3;
-
-  @media (max-width: $breakpoint-md-min) {
-    top: auto;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-  }
+  margin-top: $base * 9;
 }
 
 .nav {
-  position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 0 $base;
-  background-color: $color-white-02;
+  justify-content: space-between;
+  width: 100%;
+  color: $color-dark;
   transition: $transition-01;
-
-  @media (max-width: $breakpoint-md-min) {
-    justify-content: space-between;
-    flex-direction: row-reverse;
-    height: auto;
-    padding: $base 0;
-  }
 }
 
-.nav__list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: $base * 2;
-
-  @media (max-width: $breakpoint-md-min) {
-    justify-content: flex-end;
-    flex-direction: row;
-    gap: $base;
-    width: 100%;
-    margin-right: $base;
-  }
-}
-
-.nav__list-secondary {
-  position: absolute;
-  bottom: $base;
-  gap: $base;
-
-  @media (max-width: $breakpoint-md-min) {
-    position: static;
-    justify-content: center;
-    flex-direction: row-reverse;
-    width: auto;
-    margin-left: $base;
-  }
-}
-
-.nav__list-item {
-  width: $base * 10;
-  height: $base * 10;
-
-  @media (max-width: $breakpoint-xs-min) {
-    width: $base * 8;
-    height: $base * 8;
-  }
-
-  @media (max-width: $breakpoint-xxs-min) {
-    width: $base * 7;
-    height: $base * 7;
-  }
-}
-
-.nav__list-item__link {
-  display: block;
-  width: $base * 10;
-  height: $base * 10;
-  border: 0.125rem solid $color-dark;
-  border-radius: 50%;
-  background-color: $color-white;
-  background-size: 70%;
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  transition: $transition-01;
-
-  @media (max-width: $breakpoint-xs-min) {
-    width: $base * 8;
-    height: $base * 8;
-  }
-
-  @media (max-width: $breakpoint-xxs-min) {
-    width: $base * 7;
-    height: $base * 7;
-  }
+.nav-item__link {
+  font-size: $fs-m;
+  font-weight: $fw-medium;
+  letter-spacing: 0.05em;
+  color: $color-dark;
+  text-transform: uppercase;
 }
 
 .home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $base * 5;
+  height: $base * 5;
   background-image: url('../../../images/icons/navigation/home.svg');
-  transition: $transition-01;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.contacts {
+  margin-top: $base * 7;
+  border-top: 0.063rem solid $color-dark-02;
+  text-align: center;
+}
+
+.contacts-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $base * 2;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $base * 9;
+  height: $base * 9;
+  border-radius: 50%;
+  background-color: $color-white;
+  font-size: $fs-xxs;
+  font-weight: $fw-semi-bold;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: $color-green;
 }
