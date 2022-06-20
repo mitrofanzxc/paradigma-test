@@ -55,7 +55,7 @@ const Header: FC = () => {
       <ul className="nav contacts">
         <li className="contacts-item briefly-info">
           <p>
-            <span className="bold">Кровельные и фасадные материалы</span> в Тюмени и области.
+            <strong className="bold">Кровельные и фасадные материалы</strong> в Тюмени и области.
           </p>
           <p>Профессиональный монтаж с 2010 года.</p>
         </li>
@@ -70,7 +70,7 @@ const Header: FC = () => {
           <div className="socials-info__wrapper">
             <div className="dot" />
             <p className="socials-info">
-              Отвечаем <span className="bold">онлайн</span>
+              Отвечаем <strong className="bold">онлайн</strong>
             </p>
           </div>
           <ul className="socials">
@@ -82,8 +82,8 @@ const Header: FC = () => {
         <li className="contacts-item">
           <div className="tel__wrapper">
             <p>
-              <span className="bold">Пн-Пт</span> 9:00 - 18:00, <span className="bold">Сб</span>{' '}
-              10:00 - 18:00
+              <strong className="bold">Пн-Пт</strong> 9:00 - 18:00,{' '}
+              <strong className="bold">Сб</strong> 10:00 - 18:00
             </p>
             <a href="tel:+788002225460" className="tel">{`8 (800) 222-54-60`}</a>
             <p className="semi-bold dotted">Позвоните мне</p>

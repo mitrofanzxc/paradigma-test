@@ -23,6 +23,9 @@
 }
 
 .slider__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: $base * 3;
   flex-basis: 44%;
 }
 
@@ -30,7 +33,6 @@
   display: flex;
   align-items: center;
   gap: $base * 3;
-  margin-left: $base * 6;
 }
 
 .slider-buttons {
@@ -56,4 +58,34 @@
   &:nth-child(4) {
     border-color: $color-green-03;
   }
+}
+
+.primary-buttons {
+  display: flex;
+  align-items: center;
+  column-gap: $base * 3;
+}
+
+.click__wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: $base * 3;
+  width: 44%;
+  margin-top: $base * 2;
+}
+
+.click__description {
+  text-align: center;
+}
+
+.click {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: $base * 5;
+  min-height: $base * 5;
+  background-image: url('../../images/icons/click.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }

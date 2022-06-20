@@ -25,8 +25,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: $base * 5;
-  height: $base * 5;
+  min-width: $base * 5;
+  min-height: $base * 5;
   background-image: url('../../../images/icons/navigation/home.svg');
   background-position: center;
   background-repeat: no-repeat;

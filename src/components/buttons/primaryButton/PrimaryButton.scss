@@ -3,21 +3,20 @@
 .primary-button {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: $base * 3;
+  max-width: $base * 75;
+  max-height: $base * 20;
   padding: $base * 6;
   border: none;
   border-radius: $base * 10;
   color: $color-white;
-
-  .h3 {
-    width: 50%;
-  }
+  cursor: pointer;
 }
 
 .arrow {
-  width: $base * 5;
-  height: $base * 5;
+  min-width: $base * 5;
+  min-height: $base * 5;
   background-image: url('../../../images/icons/arrow.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -26,8 +25,20 @@
 
 .bg-green {
   background-color: $color-green;
+  transition: $transition-02;
+
+  &:hover {
+    background-color: $color-green-light;
+    transition: $transition-02;
+  }
 }
 
 .bg-orange {
   background-color: $color-orange;
+  transition: $transition-02;
+
+  &:hover {
+    background-color: $color-orange-light;
+    transition: $transition-02;
+  }
 }
