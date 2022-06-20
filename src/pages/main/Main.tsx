@@ -1,11 +1,19 @@
 import { FC } from 'react';
 
-import './Main.scss';
-
 const Main: FC = () => {
   return (
     <>
-      <section className="main-page"></section>
+      <section>
+        <aside>
+          <ul>
+            <li>Гарантия от 50 лет на материалы и 5 лет на монтаж</li>
+            <li>Замер, монтажный проект и еще 4 услуги бесплатно</li>
+            <li>Сметы точны до копейки</li>
+            <li>Поэтапная оплата, кредит или рассрочка</li>
+            <li>Наши крыши в каждом поселке и дачном сообществе региона</li>
+          </ul>
+        </aside>
+      </section>
     </>
   );
 };

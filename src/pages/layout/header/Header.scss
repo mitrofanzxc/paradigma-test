@@ -40,10 +40,29 @@
 }
 
 .contacts-item {
+  width: 18%;
+}
+
+.briefly-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: $base * 3;
+}
+
+.pdf__wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: $base * 2;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  filter: drop-shadow(0 $base $base * 5 $color-dark-03);
 }
 
 .circle {
@@ -53,10 +72,66 @@
   width: $base * 9;
   height: $base * 9;
   border-radius: 50%;
+  box-shadow: 0 $base $base * 5 $color-dark-03;
   background-color: $color-white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
   font-size: $fs-xxs;
   font-weight: $fw-semi-bold;
   letter-spacing: 0.04em;
   text-align: center;
   color: $color-green;
+}
+
+.socials-info__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $base;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $base * 3;
+  margin-top: $base * 3;
+}
+
+.dot {
+  width: $base;
+  height: $base;
+  background-color: $color-green;
+  border-radius: 50%;
+}
+
+.viber {
+  box-shadow: none;
+  background-image: url('../../../images/icons/socials/viber.svg');
+}
+
+.whatsapp {
+  box-shadow: none;
+  background-image: url('../../../images/icons/socials/whatsapp.svg');
+}
+
+.telegram {
+  box-shadow: none;
+  background-image: url('../../../images/icons/socials/telegram.svg');
+}
+
+.tel__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: $base * 2;
+}
+
+.tel {
+  font-size: $fs-xl;
+  font-weight: $fw-semi-bold;
+  letter-spacing: 0.05em;
+  color: $color-dark;
 }
