@@ -1,0 +1,70 @@
+@import '../../../sass/Constants.scss';
+
+.list-item__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: $base;
+  width: 31%;
+  cursor: pointer;
+  transition: $transition-02;
+
+  &:hover,
+  &:active,
+  &:focus {
+    .h3 {
+      color: $color-orange;
+      transition: $transition-02;
+    }
+  }
+
+  @media (max-width: $breakpoint-sm-min) {
+    width: 47%;
+  }
+}
+
+.list-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-white;
+  border-radius: $base * 4;
+  border: $base solid $color-orange;
+  overflow: hidden;
+}
+
+.list-item-link {
+  display: block;
+  color: $color-dark;
+  transition: $transition-01;
+
+  &:hover {
+    color: $color-orange;
+    transition: $transition-01;
+  }
+}
+
+.social-item__wrapper {
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    .social-item {
+      background-color: $color-white-08;
+      transition: $transition-01;
+    }
+
+    .h3 {
+      color: $color-orange;
+      transition: $transition-01;
+    }
+  }
+}
+
+.social-item {
+  border-radius: 50%;
+  transition: $transition-01;
+}
