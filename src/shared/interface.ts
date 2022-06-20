@@ -3,6 +3,11 @@ export interface IPATHS {
   notFound: string;
 }
 
+export interface IPrimaryButton {
+  description: string;
+  className: string;
+}
+
 export interface IImage {
   src: string;
   srcSmall: string;

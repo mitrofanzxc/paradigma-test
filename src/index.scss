@@ -53,39 +53,24 @@ body {
 
 .h1 {
   @include montserrat;
-  margin: 0;
-  padding: 0;
-  font-size: calc(1.5em + 4vw);
-  color: $color-orange;
+  font-size: $fs-xxxxl;
+  font-weight: $fw-light;
   text-align: center;
-  text-transform: uppercase;
-  transition: $transition-01;
 }
 
 .h2 {
   @include montserrat;
-  position: relative;
-  z-index: 2;
-  margin: 0;
-  padding: 0;
-  font-size: calc(0.5em + 4vw);
-  font-weight: $fw-semi-bold;
-  letter-spacing: 0.125rem;
-  text-align: center;
-  text-transform: uppercase;
-  transition: $transition-01;
+  font-size: $fs-xxxl;
+  font-weight: $fw-regular;
 }
 
 .h3 {
   @include montserrat;
-  margin: 0;
-  padding: 0;
-  font-size: $fs-xl;
+  font-size: $fs-m;
   font-weight: $fw-semi-bold;
-  color: $color-white;
+  letter-spacing: 0.02em;
   text-align: center;
   text-transform: uppercase;
-  transition: $transition-01;
 }
 
 .h4 {
@@ -109,13 +94,16 @@ a {
 }
 
 .semi-bold {
-  padding-bottom: $base;
-  font-size: $fs-xs;
   font-weight: $fw-semi-bold;
-  letter-spacing: 0.04em;
-  border-bottom: 0.125rem dotted $color-green;
 }
 
 .bold {
   font-weight: $fw-bold;
+}
+
+.dotted {
+  padding-bottom: $base;
+  font-size: $fs-xs;
+  letter-spacing: 0.04em;
+  border-bottom: 0.125rem dotted $color-green;
 }

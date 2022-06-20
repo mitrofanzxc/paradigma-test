@@ -1,0 +1,33 @@
+@import '../../../sass/Constants.scss';
+
+.primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $base * 3;
+  padding: $base * 6;
+  border: none;
+  border-radius: $base * 10;
+  color: $color-white;
+
+  .h3 {
+    width: 50%;
+  }
+}
+
+.arrow {
+  width: $base * 5;
+  height: $base * 5;
+  background-image: url('../../../images/icons/arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.bg-green {
+  background-color: $color-green;
+}
+
+.bg-orange {
+  background-color: $color-orange;
+}

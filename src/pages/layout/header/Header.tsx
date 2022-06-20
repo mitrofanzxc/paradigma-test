@@ -61,7 +61,7 @@ const Header: FC = () => {
         </li>
         <li className="contacts-item pdf__wrapper">
           <div className="circle">Pdf</div>
-          <p className="semi-bold">Скачать прайс-каталог</p>
+          <p className="semi-bold dotted">Скачать прайс-каталог</p>
         </li>
         <li className="contacts-item">
           <img src={Logo} alt="Logo" className="logo" />
@@ -86,7 +86,7 @@ const Header: FC = () => {
               10:00 - 18:00
             </p>
             <a href="tel:+788002225460" className="tel">{`8 (800) 222-54-60`}</a>
-            <p className="semi-bold">Позвоните мне</p>
+            <p className="semi-bold dotted">Позвоните мне</p>
           </div>
         </li>
       </ul>
