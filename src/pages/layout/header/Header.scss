@@ -103,48 +103,6 @@
 }
 
 .home {
-  background-image: url('../../../images/icons/navigation/main.svg');
-  transition: $transition-01;
-}
-
-.about {
-  background-image: url('../../../images/icons/navigation/about.svg');
-  transition: $transition-01;
-}
-
-.portfolio {
-  background-image: url('../../../images/icons/navigation/portfolio.svg');
-  transition: $transition-01;
-}
-
-.certificates {
-  background-image: url('../../../images/icons/navigation/certificates.svg');
-  transition: $transition-01;
-}
-
-.contacts {
-  background-image: url('../../../images/icons/navigation/contacts.svg');
-  transition: $transition-01;
-}
-
-.en {
-  background-image: url('../../../images/icons/navigation/en.svg');
-  transition: $transition-01;
-}
-
-.ru {
-  background-image: url('../../../images/icons/navigation/ru.svg');
-  transition: $transition-01;
-}
-
-.dark {
-  background-color: $color-dark;
-  background-image: url('../../../images/icons/navigation/dark.svg');
-  transition: $transition-01;
-}
-
-.light {
-  background-color: $color-white;
-  background-image: url('../../../images/icons/navigation/light.svg');
+  background-image: url('../../../images/icons/navigation/home.svg');
   transition: $transition-01;
 }
