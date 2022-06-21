@@ -1,3 +1,5 @@
+import { MouseEvent } from 'react';
+
 export interface IPATHS {
   main: string;
   notFound: string;
@@ -32,7 +34,8 @@ export interface IPrimaryButton {
   className: string;
   arrow: string;
   type?: 'submit';
-  onClick?: () => void;
+  onClick?: (() => void) | ((event: MouseEvent<HTMLButtonElement>) => void);
+  disabled?: boolean;
 }
 
 export interface IImage {

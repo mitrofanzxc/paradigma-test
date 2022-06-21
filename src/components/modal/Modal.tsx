@@ -1,4 +1,4 @@
-import { FC, useState, FocusEvent, ChangeEvent } from 'react';
+import { FC, useState, useEffect, FocusEvent, ChangeEvent } from 'react';
 import { IModal } from '../../shared/interface';
 import { PrimaryButton } from '../buttons';
 
@@ -11,6 +11,7 @@ const Modal: FC<IModal> = ({ isModalOpen, handleIsModalOpen }) => {
   const [isCheckedBlur, setIsCheckedBlur] = useState<boolean>(false);
   const [isPhoneError, setIsPhoneError] = useState<string>('Номер не может быть пустым.');
   const [isCheckedError, setIsCheckedError] = useState<string>('Вы должны принять условия.');
+  const [isFormValid, setIsFormValid] = useState<boolean>(false);
 
   const blurHandler = (event: FocusEvent<HTMLInputElement>) => {
     const NAME = event.currentTarget.name;
@@ -49,6 +50,14 @@ const Modal: FC<IModal> = ({ isModalOpen, handleIsModalOpen }) => {
     handleIsModalOpen(false);
   };
 
+  useEffect(() => {
+    if (isPhoneError || isCheckedError) {
+      setIsFormValid(false);
+    } else {
+      setIsFormValid(true);
+    }
+  }, [isPhoneError, isCheckedError]);
+
   return (
     <>
       <div
@@ -72,7 +81,6 @@ const Modal: FC<IModal> = ({ isModalOpen, handleIsModalOpen }) => {
                 id="phone"
                 name="phone"
                 className="primary-button input-phone"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 placeholder="+7 ( _ _ _ ) _ _ - _ _ - _ _"
                 onBlur={(event) => blurHandler(event)}
                 onChange={(event) => phoneHandler(event)}
@@ -85,6 +93,7 @@ const Modal: FC<IModal> = ({ isModalOpen, handleIsModalOpen }) => {
               className="bg-orange"
               arrow="arrow-right"
               type="submit"
+              disabled={!isFormValid}
             />
             <div className="checkbox__wrapper">
               <label className="container">
