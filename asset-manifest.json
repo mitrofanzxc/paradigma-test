@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/paradigma-test/static/css/main.e888a053.css",
-    "main.js": "/paradigma-test/static/js/main.7dfbc818.js",
+    "main.css": "/paradigma-test/static/css/main.48975a74.css",
+    "main.js": "/paradigma-test/static/js/main.0d2f48b9.js",
     "static/media/bg.jpg": "/paradigma-test/static/media/bg.7a7a23a5746ef5bdb88c.jpg",
     "static/media/Montserrat-Bold.woff": "/paradigma-test/static/media/Montserrat-Bold.180ba33d8de7dcfe80a0.woff",
     "static/media/Montserrat-Regular.woff": "/paradigma-test/static/media/Montserrat-Regular.3db65dc4b858f0fed4fb.woff",
@@ -21,11 +21,11 @@
     "static/media/home.svg": "/paradigma-test/static/media/home.04fd938299c07eeb048b.svg",
     "static/media/telegram.svg": "/paradigma-test/static/media/telegram.c7e14948d7feba86b93a.svg",
     "static/media/arrow.svg": "/paradigma-test/static/media/arrow.ea54e3ccae61a36c993a.svg",
-    "main.e888a053.css.map": "/paradigma-test/static/css/main.e888a053.css.map",
-    "main.7dfbc818.js.map": "/paradigma-test/static/js/main.7dfbc818.js.map"
+    "main.48975a74.css.map": "/paradigma-test/static/css/main.48975a74.css.map",
+    "main.0d2f48b9.js.map": "/paradigma-test/static/js/main.0d2f48b9.js.map"
   },
   "entrypoints": [
-    "static/css/main.e888a053.css",
-    "static/js/main.7dfbc818.js"
+    "static/css/main.48975a74.css",
+    "static/js/main.0d2f48b9.js"
   ]
 }
