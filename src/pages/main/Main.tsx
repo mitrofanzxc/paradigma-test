@@ -1,9 +1,15 @@
 import { FC } from 'react';
 import { PrimaryButton } from '../../components/buttons';
+import { IMain } from '../../shared/interface';
+import { Modal } from '../../components/modal/Modal';
 
 import './Main.scss';
 
-const Main: FC = () => {
+const Main: FC<IMain> = ({ isModalOpen, handleIsModalOpen, useModalOpen }) => {
+  const modalEventHandler = () => {
+    handleIsModalOpen(true);
+  };
+
   return (
     <>
       <aside className="aside">
@@ -45,11 +51,13 @@ const Main: FC = () => {
             description="Рассчитать стоимость материалов и монтажа"
             className="bg-green"
             arrow="arrow-up"
+            onClick={modalEventHandler}
           />
           <PrimaryButton
             description="Записаться на просмотр объектов"
             className="bg-orange"
             arrow="arrow-up"
+            onClick={modalEventHandler}
           />
         </div>
         <div className="click__wrapper">
@@ -60,6 +68,11 @@ const Main: FC = () => {
           </p>
         </div>
       </div>
+      <Modal
+        isModalOpen={isModalOpen}
+        handleIsModalOpen={handleIsModalOpen}
+        useModalOpen={useModalOpen}
+      />
     </>
   );
 };

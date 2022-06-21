@@ -62,7 +62,12 @@ const Header: FC<IHeader> = ({ isModalOpen, handleIsModalOpen, useModalOpen }) =
         <ul className="nav contacts">
           <li className="contacts-item briefly-info__wrapper">
             <p className="briefly-info__text">
-              <strong className="bold">Кровельные и фасадные материалы</strong> в Тюмени и области.
+              <strong className="bold">
+                Кровельные и фасадные
+                <br />
+                материалы
+              </strong>{' '}
+              в Тюмени и области.
             </p>
             <p className="briefly-info__text">
               Профессиональный монтаж

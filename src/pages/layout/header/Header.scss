@@ -14,7 +14,7 @@
 }
 
 .nav-item__link {
-  font-size: $fs-m;
+  font-size: calc((100vw - 62.063rem) / (120 - 62.063) * (14 - 14) + 0.875rem);
   font-weight: $fw-medium;
   letter-spacing: 0.05em;
   color: $color-dark;
@@ -40,7 +40,7 @@
 }
 
 // .contacts-item {
-//   width: 18%;
+//   width: 17%;
 // }
 
 .contacts-item__socials {
@@ -53,7 +53,7 @@
   justify-content: center;
   flex-direction: column;
   gap: $base * 3;
-  width: 15%;
+  // width: 15%;
 }
 
 .briefly-info__text {

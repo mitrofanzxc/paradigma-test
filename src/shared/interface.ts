@@ -15,6 +15,12 @@ export interface IHeader {
   useModalOpen: () => void;
 }
 
+export interface IMain {
+  isModalOpen: boolean;
+  handleIsModalOpen: (data: boolean) => void;
+  useModalOpen: () => void;
+}
+
 export interface IModal {
   isModalOpen: boolean;
   handleIsModalOpen: (data: boolean) => void;
@@ -26,6 +32,7 @@ export interface IPrimaryButton {
   className: string;
   arrow: string;
   type?: 'submit';
+  onClick?: () => void;
 }
 
 export interface IImage {

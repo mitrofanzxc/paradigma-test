@@ -37,7 +37,16 @@ const App: FC = () => {
           />
         }
       >
-        <Route index element={<Main />} />
+        <Route
+          index
+          element={
+            <Main
+              isModalOpen={isModalOpen}
+              handleIsModalOpen={handleIsModalOpen}
+              useModalOpen={useModalOpen}
+            />
+          }
+        />
         <Route path={notFound} element={<NotFound />} />
       </Route>
     </Routes>

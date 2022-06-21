@@ -2,7 +2,7 @@
 
 .main {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: $base * 4;
 }
@@ -12,14 +12,22 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  flex-basis: 20%;
+  flex-basis: 15%;
   background-color: $color-white;
+  border-bottom-left-radius: $base * 4;
+  border-bottom-right-radius: $base * 4;
   text-align: center;
 }
 
 .aside-item {
+  font-size: $fs-m;
   padding: $base * 8;
-  box-shadow: 0 $base $base * 5 $color-dark-03;
+  box-shadow: 0 $base $base $color-dark-03;
+
+  &:last-child {
+    border-bottom-left-radius: $base * 4;
+    border-bottom-right-radius: $base * 4;
+  }
 }
 
 .slider__wrapper {
