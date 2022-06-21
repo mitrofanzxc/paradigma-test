@@ -22,7 +22,12 @@ const Modal: FC<IModal> = ({ isModalOpen, handleIsModalOpen }) => {
             <br />
             оставить заявку
           </h2>
-          <PrimaryButton description="Позвоните мне" className="bg-orange" arrow="arrow-right" />
+          <PrimaryButton
+            description="Позвоните мне"
+            className="bg-orange"
+            arrow="arrow-right"
+            type="submit"
+          />
           <button
             className="button-navigation button-navigation__close"
             onClick={modalEventHandler}

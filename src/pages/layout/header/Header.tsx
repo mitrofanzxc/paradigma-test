@@ -70,7 +70,7 @@ const Header: FC<IHeader> = ({ isModalOpen, handleIsModalOpen, useModalOpen }) =
             </p>
           </li>
           <li className="contacts-item pdf__wrapper">
-            <div className="circle">Pdf</div>
+            <div className="circle pdf">Pdf</div>
             <p className="semi-bold dotted">Скачать прайс-каталог</p>
           </li>
           <li className="contacts-item">
@@ -83,11 +83,14 @@ const Header: FC<IHeader> = ({ isModalOpen, handleIsModalOpen, useModalOpen }) =
                 Отвечаем <strong className="bold">онлайн</strong>
               </p>
             </div>
-            <ul className="socials">
-              <li className="circle viber" />
-              <li className="circle whatsapp" />
-              <li className="circle telegram" />
-            </ul>
+            <div className="socials">
+              <a href="viber://chat?number=%2B788002225460" className="circle viber" />
+              <a
+                href="https://api.whatsapp.com/send/?phone=788002225460"
+                className="circle whatsapp"
+              />
+              <a href="https://t.me/788002225460" className="circle telegram" />
+            </div>
           </li>
           <li className="contacts-item">
             <div className="tel__wrapper">

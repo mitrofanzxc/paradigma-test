@@ -25,6 +25,7 @@ export interface IPrimaryButton {
   description: string;
   className: string;
   arrow: string;
+  type?: 'submit';
 }
 
 export interface IImage {

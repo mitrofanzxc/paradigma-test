@@ -83,7 +83,6 @@
   min-width: $base * 9;
   min-height: $base * 9;
   border-radius: 50%;
-  box-shadow: 0 $base $base * 5 $color-dark-03;
   background-color: $color-white;
   background-position: center;
   background-repeat: no-repeat;
@@ -122,19 +121,38 @@
   border-radius: 50%;
 }
 
+.pdf {
+  box-shadow: 0 $base $base * 5 $color-dark-03;
+}
+
 .viber {
-  box-shadow: none;
   background-image: url('../../../images/icons/socials/viber.svg');
+  transition: $transition-01;
+
+  &:hover {
+    box-shadow: 0 $base $base * 5 $color-dark-03;
+    transition: $transition-01;
+  }
 }
 
 .whatsapp {
-  box-shadow: none;
   background-image: url('../../../images/icons/socials/whatsapp.svg');
+  transition: $transition-01;
+
+  &:hover {
+    box-shadow: 0 $base $base * 5 $color-dark-03;
+    transition: $transition-01;
+  }
 }
 
 .telegram {
-  box-shadow: none;
   background-image: url('../../../images/icons/socials/telegram.svg');
+  transition: $transition-01;
+
+  &:hover {
+    box-shadow: 0 $base $base * 5 $color-dark-03;
+    transition: $transition-01;
+  }
 }
 
 .tel__wrapper {

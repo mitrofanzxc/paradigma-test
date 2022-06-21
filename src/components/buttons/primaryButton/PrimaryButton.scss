@@ -17,37 +17,35 @@
 .arrow {
   min-width: $base * 5;
   min-height: $base * 5;
-  background-image: url('../../../images/icons/arrow.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
 }
 
+.arrow-up {
+  background-image: url('../../../images/icons/arrow.svg');
+}
+
 .arrow-right {
-  min-width: $base * 5;
-  min-height: $base * 5;
   background-image: url('../../../images/icons/arrow-right.svg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
 }
 
 .bg-green {
   background-color: $color-green;
-  transition: $transition-02;
+  transition: $transition-01;
 
   &:hover {
     background-color: $color-green-light;
-    transition: $transition-02;
+    transition: $transition-01;
   }
 }
 
 .bg-orange {
   background-color: $color-orange;
-  transition: $transition-02;
+  transition: $transition-01;
 
   &:hover {
     background-color: $color-orange-light;
-    transition: $transition-02;
+    transition: $transition-01;
   }
 }

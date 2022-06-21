@@ -12,7 +12,15 @@
   height: 53.3vh;
   margin: auto;
   padding: $base * 14 $base * 13 $base * 19 $base * 13;
-  background-color: $color-white;
+  background: rgb(237, 242, 245);
+  background: -moz-linear-gradient(90deg, rgba(237, 242, 245, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(237, 242, 245, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(90deg, rgba(237, 242, 245, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#edf2f5",endColorstr="#ffffff",GradientType=1);
   border-radius: $base * 7;
   text-align: center;
 }
