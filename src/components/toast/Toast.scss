@@ -1,0 +1,31 @@
+@import '../../sass/Constants.scss';
+
+.toast {
+  position: fixed;
+  top: 130%;
+  left: 10%;
+  z-index: 3;
+  width: 20vw;
+  height: 10vh;
+  margin: auto;
+  padding: $base * 14 $base * 13 $base * 19 $base * 13;
+  background: rgb(237, 242, 245);
+  background: -moz-linear-gradient(90deg, rgba(237, 242, 245, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(237, 242, 245, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(90deg, rgba(237, 242, 245, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#edf2f5",endColorstr="#ffffff",GradientType=1);
+  border-radius: $base * 7;
+  text-align: center;
+  opacity: 0;
+  transition: $transition;
+}
+
+.toast-active {
+  top: 70%;
+  opacity: 1;
+  transition: $transition;
+}

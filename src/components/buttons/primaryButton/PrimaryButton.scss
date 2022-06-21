@@ -38,6 +38,11 @@
     background-color: $color-green-light;
     transition: $transition-01;
   }
+
+  &:disabled {
+    background-color: $color-dark-02;
+    cursor: not-allowed;
+  }
 }
 
 .bg-orange {
@@ -47,5 +52,10 @@
   &:hover {
     background-color: $color-orange-light;
     transition: $transition-01;
+  }
+
+  &:disabled {
+    background-color: $color-dark-02;
+    cursor: not-allowed;
   }
 }

@@ -3,11 +3,18 @@ import { Link } from 'react-router-dom';
 import { PATHS } from '../../../shared/routes';
 import { IHeader } from '../../../shared/interface';
 import { Modal } from '../../../components/modal/Modal';
+import { Toast } from '../../../components/toast/Toast';
 
 import Logo from '../../../images/logo.png';
 import './Header.scss';
 
-const Header: FC<IHeader> = ({ isModalOpen, handleIsModalOpen, useModalOpen }) => {
+const Header: FC<IHeader> = ({
+  isModalOpen,
+  handleIsModalOpen,
+  useModalOpen,
+  isToastOpen,
+  handleIsToastOpen,
+}) => {
   const { main } = PATHS;
 
   const modalEventHandler = () => {
@@ -89,12 +96,24 @@ const Header: FC<IHeader> = ({ isModalOpen, handleIsModalOpen, useModalOpen }) =
               </p>
             </div>
             <div className="socials">
-              <a href="viber://chat?number=%2B788002225460" className="circle viber" />
+              <a
+                href="viber://chat?number=%2B788002225460"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="circle viber"
+              />
               <a
                 href="https://api.whatsapp.com/send/?phone=788002225460"
+                target="_blank"
+                rel="noreferrer noopener"
                 className="circle whatsapp"
               />
-              <a href="https://t.me/788002225460" className="circle telegram" />
+              <a
+                href="https://t.me/788002225460"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="circle telegram"
+              />
             </div>
           </li>
           <li className="contacts-item">
@@ -118,7 +137,9 @@ const Header: FC<IHeader> = ({ isModalOpen, handleIsModalOpen, useModalOpen }) =
         isModalOpen={isModalOpen}
         handleIsModalOpen={handleIsModalOpen}
         useModalOpen={useModalOpen}
+        handleIsToastOpen={handleIsToastOpen}
       />
+      <Toast isToastOpen={isToastOpen} handleIsToastOpen={handleIsToastOpen} />
     </>
   );
 };

@@ -7,9 +7,14 @@ import { Layout, NotFound, Main } from './pages';
 const App: FC = () => {
   const { main, notFound } = PATHS;
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+  const [isToastOpen, setIsToastOpen] = useState<boolean>(false);
 
   const handleIsModalOpen = (data: boolean) => {
     setIsModalOpen(data);
+  };
+
+  const handleIsToastOpen = (data: boolean) => {
+    setIsToastOpen(data);
   };
 
   const useModalOpen = () => {
@@ -34,6 +39,8 @@ const App: FC = () => {
             isModalOpen={isModalOpen}
             handleIsModalOpen={handleIsModalOpen}
             useModalOpen={useModalOpen}
+            isToastOpen={isToastOpen}
+            handleIsToastOpen={handleIsToastOpen}
           />
         }
       >
@@ -44,6 +51,8 @@ const App: FC = () => {
               isModalOpen={isModalOpen}
               handleIsModalOpen={handleIsModalOpen}
               useModalOpen={useModalOpen}
+              isToastOpen={isToastOpen}
+              handleIsToastOpen={handleIsToastOpen}
             />
           }
         />

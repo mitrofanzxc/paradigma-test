@@ -2,10 +2,17 @@ import { FC } from 'react';
 import { PrimaryButton } from '../../components/buttons';
 import { IMain } from '../../shared/interface';
 import { Modal } from '../../components/modal/Modal';
+import { Toast } from '../../components/toast/Toast';
 
 import './Main.scss';
 
-const Main: FC<IMain> = ({ isModalOpen, handleIsModalOpen, useModalOpen }) => {
+const Main: FC<IMain> = ({
+  isModalOpen,
+  handleIsModalOpen,
+  useModalOpen,
+  isToastOpen,
+  handleIsToastOpen,
+}) => {
   const modalEventHandler = () => {
     handleIsModalOpen(true);
   };
@@ -72,7 +79,9 @@ const Main: FC<IMain> = ({ isModalOpen, handleIsModalOpen, useModalOpen }) => {
         isModalOpen={isModalOpen}
         handleIsModalOpen={handleIsModalOpen}
         useModalOpen={useModalOpen}
+        handleIsToastOpen={handleIsToastOpen}
       />
+      <Toast isToastOpen={isToastOpen} handleIsToastOpen={handleIsToastOpen} />
     </>
   );
 };

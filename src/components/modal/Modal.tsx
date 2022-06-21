@@ -1,10 +1,10 @@
-import { FC, useState, useEffect, FocusEvent, ChangeEvent } from 'react';
+import { FC, useState, useEffect, FocusEvent, ChangeEvent, MouseEvent } from 'react';
 import { IModal } from '../../shared/interface';
 import { PrimaryButton } from '../buttons';
 
 import './Modal.scss';
 
-const Modal: FC<IModal> = ({ isModalOpen, handleIsModalOpen }) => {
+const Modal: FC<IModal> = ({ isModalOpen, handleIsModalOpen, handleIsToastOpen }) => {
   const [isPhone, setIsPhone] = useState<string>('');
   const [isChecked, setIsChecked] = useState<boolean>(false);
   const [isPhoneBlur, setIsPhoneBlur] = useState<boolean>(false);
@@ -50,6 +50,12 @@ const Modal: FC<IModal> = ({ isModalOpen, handleIsModalOpen }) => {
     handleIsModalOpen(false);
   };
 
+  const handleSubmit = (event: MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    modalEventHandler();
+    handleIsToastOpen(true);
+  };
+
   useEffect(() => {
     if (isPhoneError || isCheckedError) {
       setIsFormValid(false);
@@ -93,6 +99,7 @@ const Modal: FC<IModal> = ({ isModalOpen, handleIsModalOpen }) => {
               className="bg-orange"
               arrow="arrow-right"
               type="submit"
+              onClick={handleSubmit}
               disabled={!isFormValid}
             />
             <div className="checkbox__wrapper">

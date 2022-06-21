@@ -9,24 +9,36 @@ export interface ILayout {
   isModalOpen: boolean;
   handleIsModalOpen: (data: boolean) => void;
   useModalOpen: () => void;
+  isToastOpen: boolean;
+  handleIsToastOpen: (data: boolean) => void;
 }
 
 export interface IHeader {
   isModalOpen: boolean;
   handleIsModalOpen: (data: boolean) => void;
   useModalOpen: () => void;
+  isToastOpen: boolean;
+  handleIsToastOpen: (data: boolean) => void;
 }
 
 export interface IMain {
   isModalOpen: boolean;
   handleIsModalOpen: (data: boolean) => void;
   useModalOpen: () => void;
+  isToastOpen: boolean;
+  handleIsToastOpen: (data: boolean) => void;
 }
 
 export interface IModal {
   isModalOpen: boolean;
   handleIsModalOpen: (data: boolean) => void;
   useModalOpen: () => void;
+  handleIsToastOpen: (data: boolean) => void;
+}
+
+export interface IToast {
+  isToastOpen: boolean;
+  handleIsToastOpen: (data: boolean) => void;
 }
 
 export interface IPrimaryButton {
