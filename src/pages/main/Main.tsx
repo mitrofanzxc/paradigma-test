@@ -44,8 +44,13 @@ const Main: FC = () => {
           <PrimaryButton
             description="Рассчитать стоимость материалов и монтажа"
             className="bg-green"
+            arrow="arrow"
           />
-          <PrimaryButton description="Записаться на просмотр объектов" className="bg-orange" />
+          <PrimaryButton
+            description="Записаться на просмотр объектов"
+            className="bg-orange"
+            arrow="arrow"
+          />
         </div>
         <div className="click__wrapper">
           <div className="click" />

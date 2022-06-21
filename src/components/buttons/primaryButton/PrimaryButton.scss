@@ -23,6 +23,15 @@
   background-size: 100%;
 }
 
+.arrow-right {
+  min-width: $base * 5;
+  min-height: $base * 5;
+  background-image: url('../../../images/icons/arrow-right.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
 .bg-green {
   background-color: $color-green;
   transition: $transition-02;

@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { IModal } from '../../shared/interface';
+import { PrimaryButton } from '../buttons';
 
 import './Modal.scss';
 
@@ -16,15 +17,17 @@ const Modal: FC<IModal> = ({ isModalOpen, handleIsModalOpen }) => {
       />
       <div className={`modal ${isModalOpen ? 'modal-active' : ''}`}>
         <div className="modal__container">
-          <div className="modal__info">
-            <h3 className="h3">Description</h3>
-            <ul className="modal__list"></ul>
-          </div>
+          <h2 className="h2">
+            Быстро
+            <br />
+            оставить заявку
+          </h2>
+          <PrimaryButton description="Позвоните мне" className="bg-orange" arrow="arrow-right" />
+          <button
+            className="button-navigation button-navigation__close"
+            onClick={modalEventHandler}
+          />
         </div>
-        <button
-          className="button-navigation button-navigation__close"
-          onClick={modalEventHandler}
-        />
       </div>
     </>
   );

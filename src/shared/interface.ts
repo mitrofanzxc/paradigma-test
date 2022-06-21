@@ -24,6 +24,7 @@ export interface IModal {
 export interface IPrimaryButton {
   description: string;
   className: string;
+  arrow: string;
 }
 
 export interface IImage {
