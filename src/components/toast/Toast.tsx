@@ -10,8 +10,8 @@ const Toast: FC<IToast> = ({ isToastOpen, handleIsToastOpen }) => {
 
   return (
     <div className={`toast ${isToastOpen ? 'toast-active' : ''}`}>
-      <div className="toast__container">
-        <h2 className="h2">
+      <div className="toast__wrapper">
+        <h2 className="h3">
           Ваша заявка принята,
           <br />
           ожидайте звонка!

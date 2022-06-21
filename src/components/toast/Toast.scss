@@ -3,12 +3,12 @@
 .toast {
   position: fixed;
   top: 130%;
-  left: 10%;
+  left: 5%;
   z-index: 3;
   width: 20vw;
-  height: 10vh;
+  height: max-content;
   margin: auto;
-  padding: $base * 14 $base * 13 $base * 19 $base * 13;
+  padding: $base * 6;
   background: rgb(237, 242, 245);
   background: -moz-linear-gradient(90deg, rgba(237, 242, 245, 1) 0%, rgba(255, 255, 255, 1) 100%);
   background: -webkit-linear-gradient(
@@ -20,12 +20,23 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#edf2f5",endColorstr="#ffffff",GradientType=1);
   border-radius: $base * 7;
   text-align: center;
-  opacity: 0;
+  opacity: 1;
   transition: $transition;
 }
 
 .toast-active {
-  top: 70%;
+  top: 75%;
   opacity: 1;
   transition: $transition;
+}
+
+.toast__wrapper {
+  position: relative;
+
+  .button-navigation {
+    top: -$base * 3;
+    right: -$base * 3;
+    min-width: $base * 3;
+    min-height: $base * 3;
+  }
 }
