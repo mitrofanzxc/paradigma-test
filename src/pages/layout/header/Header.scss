@@ -1,7 +1,7 @@
 @import '../../../sass/Constants.scss';
 
 .header {
-  margin-top: $base * 9;
+  margin-top: $base * 8;
 }
 
 .nav {
@@ -39,16 +39,26 @@
   text-align: center;
 }
 
-.contacts-item {
+// .contacts-item {
+//   width: 18%;
+// }
+
+.contacts-item__socials {
   width: 18%;
 }
 
-.briefly-info {
+.briefly-info__wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: $base * 3;
+  width: 15%;
+}
+
+.briefly-info__text {
+  font-size: $fs-xs;
+  font-weight: $fw-regular;
 }
 
 .pdf__wrapper {
@@ -56,6 +66,7 @@
   align-items: center;
   justify-content: center;
   gap: $base * 2;
+  width: 18%;
 }
 
 .logo {
@@ -69,8 +80,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: $base * 9;
-  height: $base * 9;
+  min-width: $base * 9;
+  min-height: $base * 9;
   border-radius: 50%;
   box-shadow: 0 $base $base * 5 $color-dark-03;
   background-color: $color-white;
@@ -89,6 +100,11 @@
   align-items: center;
   justify-content: center;
   gap: $base;
+}
+
+.socials-info {
+  font-size: $fs-xs;
+  font-weight: $fw-regular;
 }
 
 .socials {
@@ -127,6 +143,9 @@
   justify-content: center;
   flex-direction: column;
   gap: $base * 2;
+  font-size: $fs-xs;
+  font-weight: $fw-regular;
+  letter-spacing: 0.02em;
 }
 
 .tel {

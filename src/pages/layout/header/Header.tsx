@@ -1,11 +1,12 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { PATHS } from '../../../shared/routes';
+import { IHeader } from '../../../shared/interface';
 
 import Logo from '../../../images/logo.png';
 import './Header.scss';
 
-const Header: FC = () => {
+const Header: FC<IHeader> = ({ isModalOpen, handleIsModalOpen, useModalOpen }) => {
   const { main } = PATHS;
 
   return (
@@ -53,11 +54,14 @@ const Header: FC = () => {
         </ul>
       </nav>
       <ul className="nav contacts">
-        <li className="contacts-item briefly-info">
-          <p>
+        <li className="contacts-item briefly-info__wrapper">
+          <p className="briefly-info__text">
             <strong className="bold">Кровельные и фасадные материалы</strong> в Тюмени и области.
           </p>
-          <p>Профессиональный монтаж с 2010 года.</p>
+          <p className="briefly-info__text">
+            Профессиональный монтаж
+            <br />с 2010 года.
+          </p>
         </li>
         <li className="contacts-item pdf__wrapper">
           <div className="circle">Pdf</div>
@@ -66,7 +70,7 @@ const Header: FC = () => {
         <li className="contacts-item">
           <img src={Logo} alt="Logo" className="logo" />
         </li>
-        <li className="contacts-item">
+        <li className="contacts-item contacts-item__socials">
           <div className="socials-info__wrapper">
             <div className="dot" />
             <p className="socials-info">
@@ -86,7 +90,7 @@ const Header: FC = () => {
               <strong className="bold">Сб</strong> 10:00 - 18:00
             </p>
             <a href="tel:+788002225460" className="tel">{`8 (800) 222-54-60`}</a>
-            <p className="semi-bold dotted">Позвоните мне</p>
+            <p className="semi-bold dotted color-green">Позвоните мне</p>
           </div>
         </li>
       </ul>

@@ -3,6 +3,24 @@ export interface IPATHS {
   notFound: string;
 }
 
+export interface ILayout {
+  isModalOpen: boolean;
+  handleIsModalOpen: (data: boolean) => void;
+  useModalOpen: () => void;
+}
+
+export interface IHeader {
+  isModalOpen: boolean;
+  handleIsModalOpen: (data: boolean) => void;
+  useModalOpen: () => void;
+}
+
+export interface IModal {
+  isModalOpen: boolean;
+  handleIsModalOpen: (data: boolean) => void;
+  useModalOpen: () => void;
+}
+
 export interface IPrimaryButton {
   description: string;
   className: string;
@@ -17,16 +35,4 @@ export interface IImage {
     prototype: HTMLImageElement;
     new (): HTMLImageElement;
   };
-}
-
-export interface IModal {
-  useModalOpen: () => void;
-  isModalOpen: boolean;
-  handleIsModalOpen: (data: boolean) => void;
-  language: string;
-}
-
-export interface IButtonNavigation {
-  onClick: () => void;
-  className: string;
 }

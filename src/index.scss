@@ -42,12 +42,12 @@ body {
 }
 
 .wrapper {
-  width: 82%;
+  width: 82vw;
   max-width: $base * 314;
   margin: 0 auto;
 
   @media (max-width: $breakpoint-lg-min) {
-    width: 97%;
+    width: 97vw;
   }
 }
 
@@ -105,4 +105,8 @@ a {
   font-size: $fs-xs;
   letter-spacing: 0.04em;
   border-bottom: 0.125rem dotted $color-green;
+}
+
+.color-green {
+  color: $color-green;
 }
