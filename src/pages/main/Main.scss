@@ -4,7 +4,8 @@
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: $base * 4;
+  column-gap: $base * 12;
+  margin-top: $base * 15;
 }
 
 .aside {
@@ -33,8 +34,8 @@
 .slider__wrapper {
   display: flex;
   flex-direction: column;
-  row-gap: $base * 3;
-  flex-basis: 44%;
+  row-gap: $base * 12;
+  flex-basis: 45%;
 }
 
 .slider-buttons__wrapper {
