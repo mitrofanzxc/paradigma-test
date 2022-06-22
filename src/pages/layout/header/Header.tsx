@@ -23,7 +23,7 @@ const Header: FC<IHeader> = ({
 
   return (
     <>
-      <header className="header">
+      <header className="header header-primary">
         <nav>
           <ul className="nav">
             <li className="nav-item">
@@ -134,6 +134,81 @@ const Header: FC<IHeader> = ({
             </div>
           </li>
         </ul>
+      </header>
+      <header className="header header-secondary">
+        <nav>
+          <ul className="nav">
+            <li className="nav-item">
+              <Link to={main}>
+                <img src={Logo} alt="Logo" className="logo" />
+              </Link>
+            </li>
+            <li className="nav-item">
+              <div className="tel__wrapper">
+                <p>
+                  <strong className="bold">Пн-Пт</strong> 9:00 - 18:00,{' '}
+                  <strong className="bold">Сб</strong> 10:00 - 18:00
+                </p>
+                <a href="tel:+788002225460" className="tel">{`8 (800) 222-54-60`}</a>
+                <p
+                  onClick={modalEventHandler}
+                  className="semi-bold dotted color-green cursor-pointer"
+                >
+                  Позвоните мне
+                </p>
+              </div>
+            </li>
+            <li className="nav-item">
+              <button className="burger">
+                <span className="burger-line" />
+                <span className="burger-line" />
+                <span className="burger-line" />
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul className="nav burger__nav">
+            <li className="nav-item">
+              <Link to={main} className="home" />
+            </li>
+            <li className="nav-item">
+              <Link to={main} className="nav-item__link">
+                Каталог
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to={main} className="nav-item__link">
+                Преимущества
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to={main} className="nav-item__link">
+                Примеры работ
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to={main} className="nav-item__link">
+                Монтаж
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to={main} className="nav-item__link">
+                Отзывы
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to={main} className="nav-item__link">
+                Ответы на вопросы
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to={main} className="nav-item__link">
+                Контакты
+              </Link>
+            </li>
+          </ul>
+        </nav>
       </header>
       <Modal
         isModalOpen={isModalOpen}

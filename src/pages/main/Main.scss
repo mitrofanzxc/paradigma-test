@@ -18,6 +18,13 @@
   border-bottom-left-radius: $base * 4;
   border-bottom-right-radius: $base * 4;
   text-align: center;
+
+  @media (max-width: $breakpoint-lg-min) {
+    position: fixed;
+    top: 85%;
+    left: 40%;
+    width: 30%;
+  }
 }
 
 .aside-item {

@@ -1,7 +1,24 @@
 @import '../../../sass/Constants.scss';
 
 .header {
+  display: flex;
+  flex-direction: column;
   margin-top: $base * 8;
+}
+
+.header-primary {
+  @media (max-width: $breakpoint-lg-min) {
+    display: none;
+  }
+}
+
+.header-secondary {
+  display: none;
+
+  @media (max-width: $breakpoint-lg-min) {
+    display: flex;
+    margin-top: 0;
+  }
 }
 
 .nav {
@@ -11,6 +28,12 @@
   width: 100%;
   color: $color-dark;
   transition: $transition-01;
+}
+
+.burger__nav {
+  justify-content: center;
+  flex-direction: column;
+  gap: $base * 2;
 }
 
 .nav-item__link {
@@ -41,6 +64,36 @@
       transition: $transition-01;
     }
   }
+}
+
+.burger {
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.burger-line {
+  display: block;
+  width: 1.875rem;
+  height: 2px;
+  background-color: $color-dark;
 }
 
 .home {
