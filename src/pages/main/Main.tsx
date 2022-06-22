@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { PrimaryButton } from '../../components/buttons';
 import { IMain } from '../../shared/interface';
 import { Modal } from '../../components/modal/Modal';
@@ -13,15 +13,24 @@ const Main: FC<IMain> = ({
   isToastOpen,
   handleIsToastOpen,
 }) => {
+  const [isAsideOpen, setIsAsideOpen] = useState(false);
+
+  const asideHandler = () => {
+    setIsAsideOpen(!isAsideOpen);
+  };
+
   const modalEventHandler = () => {
     handleIsModalOpen(true);
   };
 
   return (
     <>
-      <aside className="aside">
+      <aside className={`aside ${isAsideOpen ? 'aside-active' : ''}`}>
         <ul>
-          <button className="circle button-aside" />
+          <button
+            className={`circle button-aside ${isAsideOpen ? 'button-aside__close' : ''}`}
+            onClick={asideHandler}
+          />
           <li className="aside-item">
             <strong className="bold">Гарантия от 50 лет</strong> на материалы и 5 лет на монтаж
           </li>
