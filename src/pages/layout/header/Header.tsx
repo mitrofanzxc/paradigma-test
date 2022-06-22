@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { PATHS } from '../../../shared/routes';
 import { IHeader } from '../../../shared/interface';
@@ -15,11 +15,31 @@ const Header: FC<IHeader> = ({
   isToastOpen,
   handleIsToastOpen,
 }) => {
+  const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false);
+
+  const handleBurger = () => {
+    setIsBurgerOpen(!isBurgerOpen);
+    console.log('123');
+  };
+
   const { main } = PATHS;
 
   const modalEventHandler = () => {
     handleIsModalOpen(true);
   };
+
+  const burgerEventHandler = () => {
+    setIsBurgerOpen(false);
+  };
+
+  useEffect(() => {
+    const BODY = document.querySelector('.body');
+    if (isBurgerOpen) {
+      BODY?.classList.add('body__overflow');
+    } else {
+      BODY?.classList.remove('body__overflow');
+    }
+  }, [isBurgerOpen]);
 
   return (
     <>
@@ -136,6 +156,10 @@ const Header: FC<IHeader> = ({
         </ul>
       </header>
       <header className="header header-secondary">
+        <div
+          onClick={burgerEventHandler}
+          className={`burger__shadow ${isBurgerOpen ? 'burger__shadow-active' : ''}`}
+        />
         <nav>
           <ul className="nav">
             <li className="nav-item">
@@ -159,16 +183,16 @@ const Header: FC<IHeader> = ({
               </div>
             </li>
             <li className="nav-item">
-              <button className="burger">
-                <span className="burger-line" />
-                <span className="burger-line" />
-                <span className="burger-line" />
+              <button className="burger" onClick={handleBurger}>
+                <span className={`burger-line ${isBurgerOpen ? 'burger-line-active' : ''}`} />
+                <span className={`burger-line ${isBurgerOpen ? 'burger-line-active' : ''}`} />
+                <span className={`burger-line ${isBurgerOpen ? 'burger-line-active' : ''}`} />
               </button>
             </li>
           </ul>
         </nav>
         <nav>
-          <ul className="nav burger__nav">
+          <ul className={`nav burger__nav ${isBurgerOpen ? 'burger__nav-active' : ''}`}>
             <li className="nav-item">
               <Link to={main} className="home" />
             </li>

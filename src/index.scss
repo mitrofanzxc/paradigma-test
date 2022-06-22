@@ -28,6 +28,10 @@ body {
   color: $color-dark;
   scroll-behavior: smooth;
   transition: $transition-01;
+
+  @media (max-width: $breakpoint-lg-min) {
+    background-size: 150%;
+  }
 }
 
 .body__overflow {
