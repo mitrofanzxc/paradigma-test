@@ -15,22 +15,35 @@
   flex-direction: column;
   flex-basis: 15%;
   background-color: $color-white;
+  border-top-left-radius: $base * 4;
+  border-top-right-radius: $base * 4;
   border-bottom-left-radius: $base * 4;
   border-bottom-right-radius: $base * 4;
   text-align: center;
+  transition: $transition;
 
   @media (max-width: $breakpoint-lg-min) {
     position: fixed;
-    top: 85%;
+    bottom: -55%;
     left: 40%;
     width: 30%;
   }
+}
+
+.aside-active {
+  bottom: 0;
+  transition: $transition;
 }
 
 .aside-item {
   font-size: $fs-m;
   padding: $base * 8;
   box-shadow: 0 $base $base $color-dark-03;
+
+  &:first-child {
+    border-top-left-radius: $base * 4;
+    border-top-right-radius: $base * 4;
+  }
 
   &:last-child {
     border-bottom-left-radius: $base * 4;
@@ -43,12 +56,25 @@
   flex-direction: column;
   row-gap: $base * 12;
   flex-basis: 45%;
+
+  @media (max-width: $breakpoint-lg-min) {
+    justify-content: center;
+    row-gap: $base * 4;
+    flex-basis: 100%;
+    text-align: center;
+  }
 }
 
 .slider-buttons__wrapper {
   display: flex;
   align-items: center;
   gap: $base * 3;
+
+  @media (max-width: $breakpoint-lg-min) {
+    justify-content: center;
+    flex-basis: 100%;
+    text-align: center;
+  }
 }
 
 .slider-buttons {
@@ -80,6 +106,46 @@
   display: flex;
   align-items: center;
   column-gap: $base * 3;
+
+  @media (max-width: $breakpoint-lg-min) {
+    justify-content: center;
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+
+.button-aside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: $color-orange;
+  background-image: url('../../images/icons/plus.svg');
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: $transition-01;
+  visibility: hidden;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: $transition-01;
+  }
+
+  @media (max-width: $breakpoint-lg-min) {
+    visibility: visible;
+  }
+}
+
+.button-aside__close {
+  transform: rotate(45deg);
+  transition: $transition-01;
+
+  &:hover {
+    transform: rotate(45deg);
+    transition: $transition-01;
+  }
 }
 
 .click__wrapper {
@@ -88,6 +154,13 @@
   gap: $base * 3;
   width: 44%;
   margin-top: $base * 2;
+
+  @media (max-width: $breakpoint-lg-min) {
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: $base * 2 auto 0 auto;
+  }
 }
 
 .click__description {
