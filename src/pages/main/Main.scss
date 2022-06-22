@@ -1,0 +1,107 @@
+@import '../../sass/Constants.scss';
+
+.main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  column-gap: $base * 12;
+  margin-top: $base * 15;
+}
+
+.aside {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-basis: 15%;
+  background-color: $color-white;
+  border-bottom-left-radius: $base * 4;
+  border-bottom-right-radius: $base * 4;
+  text-align: center;
+
+  @media (max-width: $breakpoint-lg-min) {
+    position: fixed;
+    top: 85%;
+    left: 40%;
+    width: 30%;
+  }
+}
+
+.aside-item {
+  font-size: $fs-m;
+  padding: $base * 8;
+  box-shadow: 0 $base $base $color-dark-03;
+
+  &:last-child {
+    border-bottom-left-radius: $base * 4;
+    border-bottom-right-radius: $base * 4;
+  }
+}
+
+.slider__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: $base * 12;
+  flex-basis: 45%;
+}
+
+.slider-buttons__wrapper {
+  display: flex;
+  align-items: center;
+  gap: $base * 3;
+}
+
+.slider-buttons {
+  display: flex;
+  align-items: center;
+  gap: $base;
+}
+
+.slider-button {
+  width: $base * 2;
+  height: $base * 2;
+  border-radius: 50%;
+  border: 2px solid $color-green;
+
+  &:nth-child(2) {
+    border-color: $color-green-07;
+  }
+
+  &:nth-child(3) {
+    border-color: $color-green-05;
+  }
+
+  &:nth-child(4) {
+    border-color: $color-green-03;
+  }
+}
+
+.primary-buttons {
+  display: flex;
+  align-items: center;
+  column-gap: $base * 3;
+}
+
+.click__wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: $base * 3;
+  width: 44%;
+  margin-top: $base * 2;
+}
+
+.click__description {
+  text-align: center;
+}
+
+.click {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: $base * 5;
+  min-height: $base * 5;
+  background-image: url('../../images/icons/click.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}

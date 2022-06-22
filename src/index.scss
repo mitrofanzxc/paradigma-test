@@ -1,0 +1,130 @@
+@import './sass/Constants.scss';
+
+// === FONTS ===
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url('./fonts/#{$file_name}.woff') format('woff'),
+      url('./fonts/#{$file_name}.woff2') format('woff2');
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@import './sass/Fonts.scss';
+
+// === / FONTS ===
+
+body {
+  @include montserrat;
+  @include scroll;
+  position: relative;
+  width: 100%;
+  background-image: url('./images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-dark;
+  scroll-behavior: smooth;
+  transition: $transition-01;
+}
+
+.body__overflow {
+  overflow-y: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.wrapper {
+  width: 82vw;
+  max-width: $base * 314;
+  margin: 0 auto;
+
+  @media (max-width: $breakpoint-lg-min) {
+    width: 97vw;
+  }
+}
+
+.h1 {
+  @include montserrat;
+  font-size: $fs-xxxxl;
+  font-weight: $fw-light;
+}
+
+.h2 {
+  @include montserrat;
+  font-size: $fs-xxxl;
+  font-weight: $fw-regular;
+}
+
+.h3 {
+  @include montserrat;
+  font-size: $fs-m;
+  font-weight: $fw-semi-bold;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.h4 {
+  @include montserrat;
+  margin: 0;
+  padding: 0;
+  font-size: $fs-m;
+  font-weight: $fw-regular;
+  color: $color-dark-08;
+  line-height: $base * 4;
+  letter-spacing: 0.06em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.active {
+  background-color: $color-orange;
+  transition: $transition-01;
+}
+
+.medium {
+  font-weight: $fw-medium;
+}
+
+.semi-bold {
+  font-weight: $fw-semi-bold;
+}
+
+.bold {
+  font-weight: $fw-bold;
+}
+
+.dotted {
+  padding-bottom: $base;
+  font-size: $fs-xs;
+  letter-spacing: 0.04em;
+  border-bottom: 0.125rem dotted $color-green;
+  transition: $transition-02;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: $transition-02;
+  }
+}
+
+.color-green {
+  color: $color-green;
+}
+
+.color-orange {
+  color: $color-orange;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

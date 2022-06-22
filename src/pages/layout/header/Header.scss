@@ -1,0 +1,255 @@
+@import '../../../sass/Constants.scss';
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-top: $base * 8;
+}
+
+.header-primary {
+  @media (max-width: $breakpoint-lg-min) {
+    display: none;
+  }
+}
+
+.header-secondary {
+  display: none;
+
+  @media (max-width: $breakpoint-lg-min) {
+    display: flex;
+    margin-top: 0;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: $color-dark;
+  transition: $transition-01;
+}
+
+.burger__nav {
+  justify-content: center;
+  flex-direction: column;
+  gap: $base * 2;
+}
+
+.nav-item__link {
+  position: relative;
+  font-size: calc((100vw - 62.063rem) / (120 - 62.063) * (14 - 14) + 0.875rem);
+  font-weight: $fw-medium;
+  letter-spacing: 0.05em;
+  color: $color-dark;
+  text-transform: uppercase;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: $color-orange;
+    opacity: 0;
+    transition: $transition-01;
+  }
+
+  &:hover {
+    &::after {
+      bottom: -10%;
+      opacity: 1;
+      transition: $transition-01;
+    }
+  }
+}
+
+.burger {
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.burger-line {
+  display: block;
+  width: 1.875rem;
+  height: 2px;
+  background-color: $color-dark;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: $base * 5;
+  min-height: $base * 5;
+  background-image: url('../../../images/icons/navigation/home.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: $transition-01;
+
+  &:hover {
+    transform: scale(1.2);
+    transition: $transition-01;
+  }
+}
+
+.contacts {
+  margin-top: $base * 7;
+  border-top: 0.063rem solid $color-dark-02;
+  text-align: center;
+}
+
+// .contacts-item {
+//   width: 17%;
+// }
+
+.contacts-item__socials {
+  width: 18%;
+}
+
+.briefly-info__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: $base * 3;
+  // width: 15%;
+}
+
+.briefly-info__text {
+  font-size: $fs-xs;
+  font-weight: $fw-regular;
+}
+
+.pdf__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $base * 2;
+  width: 18%;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  filter: drop-shadow(0 $base $base * 5 $color-dark-03);
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: $base * 9;
+  min-height: $base * 9;
+  border-radius: 50%;
+  background-color: $color-white;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-size: $fs-xxs;
+  font-weight: $fw-semi-bold;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: $color-green;
+}
+
+.socials-info__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $base;
+}
+
+.socials-info {
+  font-size: $fs-xs;
+  font-weight: $fw-regular;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $base * 3;
+  margin-top: $base * 3;
+}
+
+.dot {
+  width: $base;
+  height: $base;
+  background-color: $color-green;
+  border-radius: 50%;
+}
+
+.pdf {
+  box-shadow: 0 $base $base * 5 $color-dark-03;
+}
+
+.viber {
+  background-image: url('../../../images/icons/socials/viber.svg');
+  transition: $transition-01;
+
+  &:hover {
+    box-shadow: 0 $base $base * 5 $color-dark-03;
+    transition: $transition-01;
+  }
+}
+
+.whatsapp {
+  background-image: url('../../../images/icons/socials/whatsapp.svg');
+  transition: $transition-01;
+
+  &:hover {
+    box-shadow: 0 $base $base * 5 $color-dark-03;
+    transition: $transition-01;
+  }
+}
+
+.telegram {
+  background-image: url('../../../images/icons/socials/telegram.svg');
+  transition: $transition-01;
+
+  &:hover {
+    box-shadow: 0 $base $base * 5 $color-dark-03;
+    transition: $transition-01;
+  }
+}
+
+.tel__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: $base * 2;
+  font-size: $fs-xs;
+  font-weight: $fw-regular;
+  letter-spacing: 0.02em;
+}
+
+.tel {
+  font-size: $fs-xl;
+  font-weight: $fw-semi-bold;
+  letter-spacing: 0.05em;
+  color: $color-dark;
+}
