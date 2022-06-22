@@ -108,6 +108,35 @@
   }
 }
 
+.button-aside {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: $color-orange;
+  background-image: url('../../images/icons/plus.svg');
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: $transition-01;
+  visibility: hidden;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: $transition-01;
+  }
+
+  @media (max-width: $breakpoint-lg-min) {
+    visibility: visible;
+  }
+}
+
+.button-aside__close {
+  transform: rotate(45deg);
+  transition: $transition-01;
+}
+
 .click__wrapper {
   display: flex;
   align-items: flex-start;

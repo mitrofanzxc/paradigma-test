@@ -21,6 +21,7 @@ const Main: FC<IMain> = ({
     <>
       <aside className="aside">
         <ul>
+          <button className="circle button-aside" />
           <li className="aside-item">
             <strong className="bold">Гарантия от 50 лет</strong> на материалы и 5 лет на монтаж
           </li>
