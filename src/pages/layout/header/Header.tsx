@@ -43,7 +43,7 @@ const Header: FC<IHeader> = ({
 
   return (
     <>
-      <header className="header header-primary">
+      <header className="header header-primary" data-testid="header">
         <nav>
           <ul className="nav">
             <li className="nav-item">

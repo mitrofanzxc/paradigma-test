@@ -3,15 +3,15 @@ import { render, screen } from '@testing-library/react';
 
 import { App } from './App';
 
-describe('Main page', () => {
-  it('Main page', () => {
+describe('Home Page', () => {
+  it('Home Page', () => {
     render(
       <BrowserRouter>
         <App />
       </BrowserRouter>
     );
 
-    const MAIN_PAGE = screen.getByTestId('mainpage');
-    expect(MAIN_PAGE).toBeInTheDocument();
+    const HEADER = screen.getByTestId('header');
+    expect(HEADER).toBeInTheDocument();
   });
 });
