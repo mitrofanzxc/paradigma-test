@@ -27,7 +27,7 @@ const Header: FC<IHeader> = ({
         <nav>
           <ul className="nav">
             <li className="nav-item">
-              <Link to={main} className="nav-item__link home" />
+              <Link to={main} className="home" />
             </li>
             <li className="nav-item">
               <Link to={main} className="nav-item__link">
@@ -82,11 +82,13 @@ const Header: FC<IHeader> = ({
             </p>
           </li>
           <li className="contacts-item pdf__wrapper">
-            <div className="circle pdf">Pdf</div>
-            <p className="semi-bold dotted">Скачать прайс-каталог</p>
+            <div className="circle pdf cursor-pointer">Pdf</div>
+            <p className="semi-bold dotted cursor-pointer">Скачать прайс-каталог</p>
           </li>
           <li className="contacts-item">
-            <img src={Logo} alt="Logo" className="logo" />
+            <Link to={main}>
+              <img src={Logo} alt="Logo" className="logo" />
+            </Link>
           </li>
           <li className="contacts-item contacts-item__socials">
             <div className="socials-info__wrapper">

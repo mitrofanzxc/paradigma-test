@@ -2,6 +2,8 @@
 
 .modal {
   display: none;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   right: 0;
@@ -31,7 +33,7 @@
 }
 
 .modal-active {
-  display: block;
+  display: flex;
 }
 
 .modal__shadow {

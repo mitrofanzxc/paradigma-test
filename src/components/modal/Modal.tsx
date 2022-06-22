@@ -53,6 +53,8 @@ const Modal: FC<IModal> = ({ isModalOpen, handleIsModalOpen, handleIsToastOpen }
   const handleSubmit = (event: MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
     modalEventHandler();
+    setIsPhone('');
+    setIsChecked(false);
     handleIsToastOpen(true);
   };
 
