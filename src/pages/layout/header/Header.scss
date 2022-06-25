@@ -6,21 +6,6 @@
   margin-top: $base * 8;
 }
 
-.header-primary {
-  @media (max-width: $breakpoint-lg-min) {
-    display: none;
-  }
-}
-
-.header-secondary {
-  display: none;
-
-  @media (max-width: $breakpoint-lg-min) {
-    display: flex;
-    margin-top: 0;
-  }
-}
-
 .nav {
   display: flex;
   align-items: center;
@@ -66,7 +51,7 @@
 
 .nav-item__link {
   position: relative;
-  font-size: calc((100vw - 62.063rem) / (120 - 62.063) * (14 - 14) + 0.875rem);
+  font-size: calc((100vw - 62.063rem) / (120 - 62.063) * (0.875 - 0.625) + 0.625rem);
   font-weight: $fw-medium;
   letter-spacing: 0.05em;
   color: $color-dark;
@@ -172,10 +157,6 @@
   text-align: center;
 }
 
-// .contacts-item {
-//   width: 17%;
-// }
-
 .contacts-item__socials {
   width: 18%;
 }
@@ -186,7 +167,6 @@
   justify-content: center;
   flex-direction: column;
   gap: $base * 3;
-  // width: 15%;
 }
 
 .briefly-info__text {

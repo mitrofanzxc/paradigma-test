@@ -9,7 +9,7 @@ import './Main.scss';
 const Main: FC<IMain> = ({
   isModalOpen,
   handleIsModalOpen,
-  useModalOpen,
+  useBodyOverflow,
   isToastOpen,
   handleIsToastOpen,
 }) => {
@@ -26,28 +26,25 @@ const Main: FC<IMain> = ({
   return (
     <>
       <aside className={`aside ${isAsideOpen ? 'aside-active' : ''}`}>
-        <ul>
-          <button
-            className={`circle button-aside ${isAsideOpen ? 'button-aside__close' : ''}`}
-            onClick={asideHandler}
-          />
-          <li className="aside-item">
-            <strong className="bold">Гарантия от 50 лет</strong> на материалы и 5 лет на монтаж
-          </li>
-          <li className="aside-item">
-            <strong className="bold">Замер, монтажный проект</strong> и еще 4 услуги бесплатно
-          </li>
-          <li className="aside-item">
-            <strong className="bold">Сметы точны</strong> до копейки
-          </li>
-          <li className="aside-item">
-            <strong className="bold">Поэтапная оплата,</strong> кредит или рассрочка
-          </li>
-          <li className="aside-item">
-            <strong className="bold">Наши крыши в каждом поселке</strong> и дачном сообществе
-            региона
-          </li>
-        </ul>
+        <button
+          className={`circle button-aside ${isAsideOpen ? 'button-aside__close' : ''}`}
+          onClick={asideHandler}
+        />
+        <h4 className="h4 aside-item">
+          <strong className="bold">Гарантия от 50 лет</strong> на материалы и 5 лет на монтаж
+        </h4>
+        <h4 className="h4 aside-item">
+          <strong className="bold">Замер, монтажный проект</strong> и еще 4 услуги бесплатно
+        </h4>
+        <h4 className="h4 aside-item">
+          <strong className="bold">Сметы точны</strong> до копейки
+        </h4>
+        <h4 className="h4 aside-item">
+          <strong className="bold">Поэтапная оплата,</strong> кредит или рассрочка
+        </h4>
+        <h4 className="h4 aside-item">
+          <strong className="bold">Наши крыши в каждом поселке</strong> и дачном сообществе региона
+        </h4>
       </aside>
       <div className="slider__wrapper">
         <h1 className="h1">
@@ -88,7 +85,7 @@ const Main: FC<IMain> = ({
       <Modal
         isModalOpen={isModalOpen}
         handleIsModalOpen={handleIsModalOpen}
-        useModalOpen={useModalOpen}
+        useBodyOverflow={useBodyOverflow}
         handleIsToastOpen={handleIsToastOpen}
       />
       <Toast isToastOpen={isToastOpen} handleIsToastOpen={handleIsToastOpen} />

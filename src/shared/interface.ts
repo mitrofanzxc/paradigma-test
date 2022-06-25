@@ -8,32 +8,38 @@ export interface IPATHS {
 export interface ILayout {
   isModalOpen: boolean;
   handleIsModalOpen: (data: boolean) => void;
-  useModalOpen: () => void;
   isToastOpen: boolean;
   handleIsToastOpen: (data: boolean) => void;
+  isBurgerOpen: boolean;
+  handleIsBurgerOpen: (data: boolean) => void;
+  useBodyOverflow: () => void;
 }
 
 export interface IHeader {
   isModalOpen: boolean;
   handleIsModalOpen: (data: boolean) => void;
-  useModalOpen: () => void;
   isToastOpen: boolean;
   handleIsToastOpen: (data: boolean) => void;
+  isBurgerOpen: boolean;
+  handleIsBurgerOpen: (data: boolean) => void;
+  useBodyOverflow: () => void;
 }
 
 export interface IMain {
   isModalOpen: boolean;
   handleIsModalOpen: (data: boolean) => void;
-  useModalOpen: () => void;
   isToastOpen: boolean;
   handleIsToastOpen: (data: boolean) => void;
+  isBurgerOpen: boolean;
+  handleIsBurgerOpen: (data: boolean) => void;
+  useBodyOverflow: () => void;
 }
 
 export interface IModal {
   isModalOpen: boolean;
   handleIsModalOpen: (data: boolean) => void;
-  useModalOpen: () => void;
   handleIsToastOpen: (data: boolean) => void;
+  useBodyOverflow: () => void;
 }
 
 export interface IToast {

@@ -6,18 +6,22 @@ import { ILayout } from '../../shared/interface';
 const Layout: FC<ILayout> = ({
   isModalOpen,
   handleIsModalOpen,
-  useModalOpen,
   isToastOpen,
   handleIsToastOpen,
+  isBurgerOpen,
+  handleIsBurgerOpen,
+  useBodyOverflow,
 }) => {
   return (
     <>
       <Header
         isModalOpen={isModalOpen}
         handleIsModalOpen={handleIsModalOpen}
-        useModalOpen={useModalOpen}
         isToastOpen={isToastOpen}
         handleIsToastOpen={handleIsToastOpen}
+        isBurgerOpen={isBurgerOpen}
+        handleIsBurgerOpen={handleIsBurgerOpen}
+        useBodyOverflow={useBodyOverflow}
       />
       <main className="main">
         <Outlet />

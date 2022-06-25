@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from 'react';
+import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { PATHS } from '../../../shared/routes';
 import { IHeader } from '../../../shared/interface';
@@ -11,39 +11,21 @@ import './Header.scss';
 const Header: FC<IHeader> = ({
   isModalOpen,
   handleIsModalOpen,
-  useModalOpen,
   isToastOpen,
   handleIsToastOpen,
+  isBurgerOpen,
+  handleIsBurgerOpen,
+  useBodyOverflow,
 }) => {
-  const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false);
-
-  const handleBurger = () => {
-    setIsBurgerOpen(!isBurgerOpen);
-    console.log('123');
-  };
-
   const { main } = PATHS;
-
-  const modalEventHandler = () => {
-    handleIsModalOpen(true);
-  };
-
-  const burgerEventHandler = () => {
-    setIsBurgerOpen(false);
-  };
-
-  useEffect(() => {
-    const BODY = document.querySelector('.body');
-    if (isBurgerOpen) {
-      BODY?.classList.add('body__overflow');
-    } else {
-      BODY?.classList.remove('body__overflow');
-    }
-  }, [isBurgerOpen]);
 
   return (
     <>
-      <header className="header header-primary" data-testid="header">
+      <header className="header" data-testid="header">
+        {/* <div
+          onClick={handleIsBurgerOpen(false)}
+          className={`burger__shadow ${isBurgerOpen ? 'burger__shadow-active' : ''}`}
+        /> */}
         <nav>
           <ul className="nav">
             <li className="nav-item">
@@ -83,6 +65,13 @@ const Header: FC<IHeader> = ({
               <Link to={main} className="nav-item__link">
                 Контакты
               </Link>
+            </li>
+            <li className="nav-item">
+              {/* <button className="burger" onClick={handleIsBurgerOpen(!isBurgerOpen)}>
+                <span className={`burger-line ${isBurgerOpen ? 'burger-line-active' : ''}`} />
+                <span className={`burger-line ${isBurgerOpen ? 'burger-line-active' : ''}`} />
+                <span className={`burger-line ${isBurgerOpen ? 'burger-line-active' : ''}`} />
+              </button> */}
             </li>
           </ul>
         </nav>
@@ -146,7 +135,7 @@ const Header: FC<IHeader> = ({
               </p>
               <a href="tel:+788002225460" className="tel">{`8 (800) 222-54-60`}</a>
               <p
-                onClick={modalEventHandler}
+                onClick={() => handleIsModalOpen(true)}
                 className="semi-bold dotted color-green cursor-pointer"
               >
                 Позвоните мне
@@ -155,90 +144,11 @@ const Header: FC<IHeader> = ({
           </li>
         </ul>
       </header>
-      <header className="header header-secondary">
-        <div
-          onClick={burgerEventHandler}
-          className={`burger__shadow ${isBurgerOpen ? 'burger__shadow-active' : ''}`}
-        />
-        <nav>
-          <ul className="nav">
-            <li className="nav-item">
-              <Link to={main}>
-                <img src={Logo} alt="Logo" className="logo" />
-              </Link>
-            </li>
-            <li className="nav-item">
-              <div className="tel__wrapper">
-                <p>
-                  <strong className="bold">Пн-Пт</strong> 9:00 - 18:00,{' '}
-                  <strong className="bold">Сб</strong> 10:00 - 18:00
-                </p>
-                <a href="tel:+788002225460" className="tel">{`8 (800) 222-54-60`}</a>
-                <p
-                  onClick={modalEventHandler}
-                  className="semi-bold dotted color-green cursor-pointer"
-                >
-                  Позвоните мне
-                </p>
-              </div>
-            </li>
-            <li className="nav-item">
-              <button className="burger" onClick={handleBurger}>
-                <span className={`burger-line ${isBurgerOpen ? 'burger-line-active' : ''}`} />
-                <span className={`burger-line ${isBurgerOpen ? 'burger-line-active' : ''}`} />
-                <span className={`burger-line ${isBurgerOpen ? 'burger-line-active' : ''}`} />
-              </button>
-            </li>
-          </ul>
-        </nav>
-        <nav>
-          <ul className={`nav burger__nav ${isBurgerOpen ? 'burger__nav-active' : ''}`}>
-            <li className="nav-item">
-              <Link to={main} className="home" />
-            </li>
-            <li className="nav-item">
-              <Link to={main} className="nav-item__link">
-                Каталог
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to={main} className="nav-item__link">
-                Преимущества
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to={main} className="nav-item__link">
-                Примеры работ
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to={main} className="nav-item__link">
-                Монтаж
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to={main} className="nav-item__link">
-                Отзывы
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to={main} className="nav-item__link">
-                Ответы на вопросы
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to={main} className="nav-item__link">
-                Контакты
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
       <Modal
         isModalOpen={isModalOpen}
         handleIsModalOpen={handleIsModalOpen}
-        useModalOpen={useModalOpen}
         handleIsToastOpen={handleIsToastOpen}
+        useBodyOverflow={useBodyOverflow}
       />
       <Toast isToastOpen={isToastOpen} handleIsToastOpen={handleIsToastOpen} />
     </>

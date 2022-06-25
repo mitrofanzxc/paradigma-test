@@ -8,6 +8,7 @@ const App: FC = () => {
   const { main, notFound } = PATHS;
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
   const [isToastOpen, setIsToastOpen] = useState<boolean>(false);
+  const [isBurgerOpen, setIsBurgerOpen] = useState<boolean>(false);
 
   const handleIsModalOpen = (data: boolean) => {
     setIsModalOpen(data);
@@ -17,18 +18,22 @@ const App: FC = () => {
     setIsToastOpen(data);
   };
 
-  const useModalOpen = () => {
+  const handleIsBurgerOpen = (data: boolean) => {
+    setIsBurgerOpen(data);
+  };
+
+  const useBodyOverflow = () => {
     useEffect(() => {
       const BODY = document.querySelector('.body');
-      if (isModalOpen) {
+      if (isModalOpen || isBurgerOpen) {
         BODY?.classList.add('body__overflow');
       } else {
         BODY?.classList.remove('body__overflow');
       }
-    }, [isModalOpen]);
+    }, [isModalOpen, isBurgerOpen]);
   };
 
-  useModalOpen();
+  useBodyOverflow();
 
   return (
     <Routes>
@@ -38,9 +43,11 @@ const App: FC = () => {
           <Layout
             isModalOpen={isModalOpen}
             handleIsModalOpen={handleIsModalOpen}
-            useModalOpen={useModalOpen}
             isToastOpen={isToastOpen}
             handleIsToastOpen={handleIsToastOpen}
+            isBurgerOpen={isBurgerOpen}
+            handleIsBurgerOpen={handleIsBurgerOpen}
+            useBodyOverflow={useBodyOverflow}
           />
         }
       >
@@ -50,9 +57,11 @@ const App: FC = () => {
             <Main
               isModalOpen={isModalOpen}
               handleIsModalOpen={handleIsModalOpen}
-              useModalOpen={useModalOpen}
               isToastOpen={isToastOpen}
               handleIsToastOpen={handleIsToastOpen}
+              isBurgerOpen={isBurgerOpen}
+              handleIsBurgerOpen={handleIsBurgerOpen}
+              useBodyOverflow={useBodyOverflow}
             />
           }
         />
