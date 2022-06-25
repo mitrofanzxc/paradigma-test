@@ -31,25 +31,26 @@ const Main: FC<IMain> = ({
           onClick={asideHandler}
         />
         <h4 className="h4 aside-item">
-          <strong className="bold">Гарантия от 50 лет</strong> на материалы и 5 лет на монтаж
+          <strong className="fw-bold">Гарантия от 50 лет</strong> на материалы и 5 лет на монтаж
         </h4>
         <h4 className="h4 aside-item">
-          <strong className="bold">Замер, монтажный проект</strong> и еще 4 услуги бесплатно
+          <strong className="fw-bold">Замер, монтажный проект</strong> и еще 4 услуги бесплатно
         </h4>
         <h4 className="h4 aside-item">
-          <strong className="bold">Сметы точны</strong> до копейки
+          <strong className="fw-bold">Сметы точны</strong> до копейки
         </h4>
         <h4 className="h4 aside-item">
-          <strong className="bold">Поэтапная оплата,</strong> кредит или рассрочка
+          <strong className="fw-bold">Поэтапная оплата,</strong> кредит или рассрочка
         </h4>
         <h4 className="h4 aside-item">
-          <strong className="bold">Наши крыши в каждом поселке</strong> и дачном сообществе региона
+          <strong className="fw-bold">Наши крыши в каждом поселке</strong> и дачном сообществе
+          региона
         </h4>
       </aside>
       <div className="slider__wrapper">
         <h1 className="h1">
-          Продажа <strong className="semi-bold">кровельных материалов</strong> в Тюмени и Тюменской
-          области
+          Продажа <strong className="fw-semi-bold">кровельных материалов</strong> в Тюмени и
+          Тюменской области
         </h1>
         <div className="slider-buttons__wrapper">
           <ul className="slider-buttons">
@@ -77,8 +78,8 @@ const Main: FC<IMain> = ({
         <div className="click__wrapper">
           <div className="click" />
           <p className="click__description">
-            <strong className="semi-bold">Ответьте на несколько вопросов и получите</strong> сметную
-            стоимость и 3 подарка за экономию нашего времени
+            <strong className="fw-semi-bold">Ответьте на несколько вопросов и получите</strong>{' '}
+            сметную стоимость и 3 подарка за экономию нашего времени
           </p>
         </div>
       </div>

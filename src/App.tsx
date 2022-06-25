@@ -30,6 +30,7 @@ const App: FC = () => {
       } else {
         BODY?.classList.remove('body__overflow');
       }
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isModalOpen, isBurgerOpen]);
   };
 

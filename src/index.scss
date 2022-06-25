@@ -17,32 +17,30 @@
 
 // === / FONTS ===
 
-body {
-  @include montserrat;
-  @include scroll;
-  position: relative;
-  width: 100%;
-  background-image: url('./images/bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  color: $color-dark;
-  scroll-behavior: smooth;
-  transition: $transition-01;
-
-  @media (max-width: $breakpoint-lg-min) {
-    background-size: 150%;
-  }
-}
-
-.body__overflow {
-  overflow-y: hidden;
-}
+// === COMMON ===
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.body {
+  @include montserrat;
+  @include scroll;
+  position: relative;
+  width: 100%;
+  background-image: url('./images/bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $color-dark;
+  scroll-behavior: smooth;
+  transition: $transition-01;
+}
+
+.body__overflow {
+  overflow-y: hidden;
 }
 
 .wrapper {
@@ -107,11 +105,19 @@ a {
   transition: $transition-01;
 }
 
-.medium {
+.fw-light {
+  font-weight: $fw-light;
+}
+
+.fw-regular {
+  font-weight: $fw-regular;
+}
+
+.fw-medium {
   font-weight: $fw-medium;
 }
 
-.semi-bold {
+.fw-semi-bold {
   font-weight: $fw-semi-bold;
 }
 
@@ -124,11 +130,11 @@ a {
   font-size: $fs-xs;
   letter-spacing: 0.04em;
   border-bottom: 0.125rem dotted $color-green;
-  transition: $transition-02;
+  transition: $transition-01;
 
   &:hover {
-    transform: scale(1.1);
-    transition: $transition-02;
+    transform: scale(1.05);
+    transition: $transition-01;
   }
 }
 
@@ -143,3 +149,5 @@ a {
 .cursor-pointer {
   cursor: pointer;
 }
+
+// === / COMMON ===

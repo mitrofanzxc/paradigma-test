@@ -78,7 +78,7 @@ const Header: FC<IHeader> = ({
         <ul className="nav contacts">
           <li className="contacts-item briefly-info__wrapper">
             <p className="briefly-info__text">
-              <strong className="bold">
+              <strong className="fw-bold">
                 Кровельные и фасадные
                 <br />
                 материалы
@@ -92,7 +92,7 @@ const Header: FC<IHeader> = ({
           </li>
           <li className="contacts-item pdf__wrapper">
             <div className="circle pdf cursor-pointer">Pdf</div>
-            <p className="semi-bold dotted cursor-pointer">Скачать прайс-каталог</p>
+            <p className="fw-semi-bold dotted cursor-pointer">Скачать прайс-каталог</p>
           </li>
           <li className="contacts-item">
             <Link to={main}>
@@ -103,7 +103,7 @@ const Header: FC<IHeader> = ({
             <div className="socials-info__wrapper">
               <div className="dot" />
               <p className="socials-info">
-                Отвечаем <strong className="bold">онлайн</strong>
+                Отвечаем <strong className="fw-bold">онлайн</strong>
               </p>
             </div>
             <div className="socials">
@@ -130,13 +130,13 @@ const Header: FC<IHeader> = ({
           <li className="contacts-item">
             <div className="tel__wrapper">
               <p>
-                <strong className="bold">Пн-Пт</strong> 9:00 - 18:00,{' '}
-                <strong className="bold">Сб</strong> 10:00 - 18:00
+                <strong className="fw-bold">Пн-Пт</strong> 9:00 - 18:00,{' '}
+                <strong className="fw-bold">Сб</strong> 10:00 - 18:00
               </p>
               <a href="tel:+788002225460" className="tel">{`8 (800) 222-54-60`}</a>
               <p
                 onClick={() => handleIsModalOpen(true)}
-                className="semi-bold dotted color-green cursor-pointer"
+                className="fw-semi-bold dotted color-green cursor-pointer"
               >
                 Позвоните мне
               </p>
