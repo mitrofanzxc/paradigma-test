@@ -1,10 +1,9 @@
 import { FC, useState, useEffect, FocusEvent, ChangeEvent, MouseEvent } from 'react';
-import { IModal } from '../../shared/interface';
 import { PrimaryButton } from '../buttons';
 
 import './Modal.scss';
 
-const Modal: FC<IModal> = ({ isModalOpen, handleIsModalOpen, handleIsToastOpen }) => {
+const Modal: FC = () => {
   const [isPhone, setIsPhone] = useState<string>('');
   const [isChecked, setIsChecked] = useState<boolean>(false);
   const [isPhoneBlur, setIsPhoneBlur] = useState<boolean>(false);
@@ -46,16 +45,12 @@ const Modal: FC<IModal> = ({ isModalOpen, handleIsModalOpen, handleIsToastOpen }
     }
   };
 
-  const modalEventHandler = () => {
-    handleIsModalOpen(false);
-  };
-
   const handleSubmit = (event: MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
-    modalEventHandler();
+    // modalEventHandler();
     setIsPhone('');
     setIsChecked(false);
-    handleIsToastOpen(true);
+    // handleIsToastOpen(true);
   };
 
   useEffect(() => {
@@ -68,11 +63,8 @@ const Modal: FC<IModal> = ({ isModalOpen, handleIsModalOpen, handleIsToastOpen }
 
   return (
     <>
-      <div
-        onClick={modalEventHandler}
-        className={`modal__shadow ${isModalOpen ? 'modal__shadow-active' : ''}`}
-      />
-      <div className={`modal ${isModalOpen ? 'modal-active' : ''}`}>
+      <div className={`modal__shadow`} />
+      <div className={`modal`}>
         <div className="modal__container">
           <h2 className="h2">
             Быстро
@@ -124,10 +116,7 @@ const Modal: FC<IModal> = ({ isModalOpen, handleIsModalOpen, handleIsToastOpen }
               {isCheckedBlur && isCheckedError ? isCheckedError : ''}
             </div>
           </form>
-          <button
-            className="button-navigation button-navigation__close"
-            onClick={modalEventHandler}
-          />
+          <button className="button-navigation button-navigation__close" />
         </div>
       </div>
     </>

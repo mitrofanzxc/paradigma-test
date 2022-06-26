@@ -55,44 +55,44 @@
 
 .h1 {
   @include montserrat;
-  font-size: calc((100vw - 20.063rem) / (120 - 20.063) * (3.438 - 1.125) + 1.125rem);
+  font-size: calcResponsiveFontSize(18, 55, 321, 1920);
   font-weight: $fw-light;
 
   @media (max-width: $breakpoint-xxs-min) {
-    font-size: calc((100vw - 15rem) / (20 - 15) * (1.125 - 1) + 1rem);
+    font-size: calcResponsiveFontSize(16, 18, 240, 320);
   }
 }
 
 .h2 {
   @include montserrat;
-  font-size: calc((100vw - 20.063rem) / (120 - 20.063) * (2 - 0.813) + 0.813rem);
+  font-size: calcResponsiveFontSize(13, 32, 321, 1920);
   font-weight: $fw-regular;
 
   @media (max-width: $breakpoint-xxs-min) {
-    font-size: calc((100vw - 15rem) / (20 - 15) * (0.813 - 0.688) + 0.688rem);
+    font-size: calcResponsiveFontSize(11, 13, 240, 320);
   }
 }
 
 .h3 {
   @include montserrat;
-  font-size: calc((100vw - 20.063rem) / (120 - 20.063) * (0.875 - 0.625) + 0.625rem);
+  font-size: calcResponsiveFontSize(10, 14, 321, 1920);
   font-weight: $fw-semi-bold;
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: uppercase;
 
   @media (max-width: $breakpoint-xxs-min) {
-    font-size: calc((100vw - 15rem) / (20 - 15) * (0.625 - 0.5) + 0.5rem);
+    font-size: calcResponsiveFontSize(8, 10, 240, 320);
   }
 }
 
 .h4 {
   @include montserrat;
-  font-size: calc((100vw - 20.063rem) / (120 - 20.063) * (0.875 - 0.625) + 0.625rem);
+  font-size: calcResponsiveFontSize(10, 14, 321, 1920);
   font-weight: $fw-regular;
 
   @media (max-width: $breakpoint-xxs-min) {
-    font-size: calc((100vw - 15rem) / (20 - 15) * (0.625 - 0.5) + 0.5rem);
+    font-size: calcResponsiveFontSize(8, 10, 240, 320);
   }
 }
 
@@ -127,7 +127,7 @@ a {
 
 .dotted {
   padding-bottom: $base;
-  font-size: $fs-xs;
+  font-size: calcResponsiveFontSize(10, 12, 321, 1920);
   letter-spacing: 0.04em;
   border-bottom: 0.125rem dotted $color-green;
   transition: $transition-01;
@@ -135,6 +135,10 @@ a {
   &:hover {
     transform: scale(1.05);
     transition: $transition-01;
+  }
+
+  @media (max-width: $breakpoint-xxs-min) {
+    font-size: calcResponsiveFontSize(8, 10, 240, 320);
   }
 }
 

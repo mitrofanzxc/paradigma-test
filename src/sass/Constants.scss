@@ -1,4 +1,4 @@
-// === MIXIN ===
+// === MIXINS ===
 
 @mixin scroll {
   &::-webkit-scrollbar {
@@ -22,7 +22,7 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-// === / MIXIN ===
+// === / MIXINS ===
 
 // === FUNCTIONS ===
 
@@ -32,6 +32,16 @@
 
 @function rem($num) {
   @return (strip-unit($num) / 16) * 1rem;
+}
+
+@function calcResponsiveFontSize($f-min, $f-max, $w-min, $w-max) {
+  $f-min: strip-unit($f-min);
+  $f-max: strip-unit($f-max);
+  $w-min: strip-unit($w-min);
+  $w-max: strip-unit($w-max);
+  $k: ($f-max - $f-min)/ ($w-max - $w-min);
+  $b: rem($f-min - $k * $w-min);
+  @return calc(#{$k} * 100vw + #{$b});
 }
 
 // === / FUNCTIONS ===
@@ -91,6 +101,14 @@ $color-orange-07: rgba(243, 129, 32, 0.7);
 $color-orange-08: rgba(243, 129, 32, 0.8);
 $color-orange-09: rgba(243, 129, 32, 0.9);
 $color-orange-light: rgba(253, 156, 73, 1);
+$color-orange-light-02: rgba(253, 156, 73, 0.2);
+$color-orange-light-03: rgba(253, 156, 73, 0.3);
+$color-orange-light-04: rgba(253, 156, 73, 0.4);
+$color-orange-light-05: rgba(253, 156, 73, 0.5);
+$color-orange-light-06: rgba(253, 156, 73, 0.6);
+$color-orange-light-07: rgba(253, 156, 73, 0.7);
+$color-orange-light-08: rgba(253, 156, 73, 0.8);
+$color-orange-light-09: rgba(253, 156, 73, 0.9);
 $color-green: rgba(18, 200, 104, 1);
 $color-green-02: rgba(18, 200, 104, 0.2);
 $color-green-03: rgba(18, 200, 104, 0.3);
@@ -101,6 +119,23 @@ $color-green-07: rgba(18, 200, 104, 0.7);
 $color-green-08: rgba(18, 200, 104, 0.8);
 $color-green-09: rgba(18, 200, 104, 0.9);
 $color-green-light: rgba(33, 226, 124, 1);
+$color-green-light-02: rgba(33, 226, 124, 0.2);
+$color-green-light-03: rgba(33, 226, 124, 0.3);
+$color-green-light-04: rgba(33, 226, 124, 0.4);
+$color-green-light-05: rgba(33, 226, 124, 0.5);
+$color-green-light-06: rgba(33, 226, 124, 0.6);
+$color-green-light-07: rgba(33, 226, 124, 0.7);
+$color-green-light-08: rgba(33, 226, 124, 0.8);
+$color-green-light-09: rgba(33, 226, 124, 0.9);
+$color-grey: rgba(181, 181, 181, 1);
+$color-grey-02: rgba(181, 181, 181, 0.2);
+$color-grey-03: rgba(181, 181, 181, 0.3);
+$color-grey-04: rgba(181, 181, 181, 0.4);
+$color-grey-05: rgba(181, 181, 181, 0.5);
+$color-grey-06: rgba(181, 181, 181, 0.6);
+$color-grey-07: rgba(181, 181, 181, 0.7);
+$color-grey-08: rgba(181, 181, 181, 0.8);
+$color-grey-09: rgba(181, 181, 181, 0.9);
 
 $breakpoint-xxs-min: 320px;
 $breakpoint-xs-min: 480px;
@@ -117,12 +152,5 @@ $breakpoint-sm-max: $breakpoint-md-min - 1px;
 $breakpoint-md-max: $breakpoint-lg-min - 1px;
 $breakpoint-lg-max: $breakpoint-xl-min - 1px;
 $breakpoint-xl-max: $breakpoint-xxl-min - 1px;
-
-$calcWidth: 100%;
-
-$total-lines: 4;
-$left-offset: $base * 6;
-$clip-height: $base * 10;
-$line-height: $clip-height - $base;
 
 // === / VARIABLES ===

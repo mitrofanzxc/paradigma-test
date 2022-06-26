@@ -1,35 +1,15 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { PrimaryButton } from '../../components/buttons';
-import { IMain } from '../../shared/interface';
 import { Modal } from '../../components/modal/Modal';
 import { Toast } from '../../components/toast/Toast';
 
 import './Main.scss';
 
-const Main: FC<IMain> = ({
-  isModalOpen,
-  handleIsModalOpen,
-  useBodyOverflow,
-  isToastOpen,
-  handleIsToastOpen,
-}) => {
-  const [isAsideOpen, setIsAsideOpen] = useState(false);
-
-  const asideHandler = () => {
-    setIsAsideOpen(!isAsideOpen);
-  };
-
-  const modalEventHandler = () => {
-    handleIsModalOpen(true);
-  };
-
+const Main: FC = () => {
   return (
     <>
-      <aside className={`aside ${isAsideOpen ? 'aside-active' : ''}`}>
-        <button
-          className={`circle button-aside ${isAsideOpen ? 'button-aside__close' : ''}`}
-          onClick={asideHandler}
-        />
+      <aside className={`aside`}>
+        <button className={`circle button-aside`} />
         <h4 className="h4 aside-item">
           <strong className="fw-bold">Гарантия от 50 лет</strong> на материалы и 5 лет на монтаж
         </h4>
@@ -66,13 +46,11 @@ const Main: FC<IMain> = ({
             description="Рассчитать стоимость материалов и монтажа"
             className="bg-green"
             arrow="arrow-up"
-            onClick={modalEventHandler}
           />
           <PrimaryButton
             description="Записаться на просмотр объектов"
             className="bg-orange"
             arrow="arrow-up"
-            onClick={modalEventHandler}
           />
         </div>
         <div className="click__wrapper">
@@ -83,13 +61,8 @@ const Main: FC<IMain> = ({
           </p>
         </div>
       </div>
-      <Modal
-        isModalOpen={isModalOpen}
-        handleIsModalOpen={handleIsModalOpen}
-        useBodyOverflow={useBodyOverflow}
-        handleIsToastOpen={handleIsToastOpen}
-      />
-      <Toast isToastOpen={isToastOpen} handleIsToastOpen={handleIsToastOpen} />
+      <Modal />
+      <Toast />
     </>
   );
 };

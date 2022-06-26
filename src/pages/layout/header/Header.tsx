@@ -1,31 +1,28 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
+import type { RootState } from '../../../app/store';
+import { useSelector, useDispatch } from 'react-redux';
+import { switchBurgerOff, switchBurgerToggle } from '../../../features/burgerSlice';
+
 import { PATHS } from '../../../shared/routes';
-import { IHeader } from '../../../shared/interface';
 import { Modal } from '../../../components/modal/Modal';
 import { Toast } from '../../../components/toast/Toast';
 
 import Logo from '../../../images/logo.png';
 import './Header.scss';
 
-const Header: FC<IHeader> = ({
-  isModalOpen,
-  handleIsModalOpen,
-  isToastOpen,
-  handleIsToastOpen,
-  isBurgerOpen,
-  handleIsBurgerOpen,
-  useBodyOverflow,
-}) => {
+const Header: FC = () => {
   const { main } = PATHS;
+  const isBurgerOpen = useSelector((state: RootState) => state.burger.isBurgerOpen);
+  const dispatchBurger = useDispatch();
 
   return (
     <>
       <header className="header" data-testid="header">
-        {/* <div
-          onClick={handleIsBurgerOpen(false)}
+        <div
+          onClick={() => dispatchBurger(switchBurgerOff())}
           className={`burger__shadow ${isBurgerOpen ? 'burger__shadow-active' : ''}`}
-        /> */}
+        />
         <nav>
           <ul className="nav">
             <li className="nav-item">
@@ -67,11 +64,11 @@ const Header: FC<IHeader> = ({
               </Link>
             </li>
             <li className="nav-item">
-              {/* <button className="burger" onClick={handleIsBurgerOpen(!isBurgerOpen)}>
+              <button className="burger" onClick={() => dispatchBurger(switchBurgerToggle())}>
                 <span className={`burger-line ${isBurgerOpen ? 'burger-line-active' : ''}`} />
                 <span className={`burger-line ${isBurgerOpen ? 'burger-line-active' : ''}`} />
                 <span className={`burger-line ${isBurgerOpen ? 'burger-line-active' : ''}`} />
-              </button> */}
+              </button>
             </li>
           </ul>
         </nav>
@@ -134,23 +131,13 @@ const Header: FC<IHeader> = ({
                 <strong className="fw-bold">Сб</strong> 10:00 - 18:00
               </p>
               <a href="tel:+788002225460" className="tel">{`8 (800) 222-54-60`}</a>
-              <p
-                onClick={() => handleIsModalOpen(true)}
-                className="fw-semi-bold dotted color-green cursor-pointer"
-              >
-                Позвоните мне
-              </p>
+              <p className="fw-semi-bold dotted color-green cursor-pointer">Позвоните мне</p>
             </div>
           </li>
         </ul>
       </header>
-      <Modal
-        isModalOpen={isModalOpen}
-        handleIsModalOpen={handleIsModalOpen}
-        handleIsToastOpen={handleIsToastOpen}
-        useBodyOverflow={useBodyOverflow}
-      />
-      <Toast isToastOpen={isToastOpen} handleIsToastOpen={handleIsToastOpen} />
+      <Modal />
+      <Toast />
     </>
   );
 };

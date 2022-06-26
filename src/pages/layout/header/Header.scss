@@ -109,7 +109,7 @@
   width: 1.875rem;
   height: 2px;
   background-color: $color-dark;
-  transition: $transition-01;
+  transition: $transition-02;
 }
 
 .burger-line-active {
@@ -117,19 +117,19 @@
     transform: rotate(45deg);
     top: $base * 2;
     left: 0;
-    transition: $transition-01;
+    transition: $transition-02;
   }
 
   &:nth-child(2) {
     opacity: 0;
-    transition: $transition-01;
+    transition: $transition-02;
   }
 
   &:nth-child(3) {
     top: -$base * 2;
     left: 0;
     transform: rotate(-45deg);
-    transition: $transition-01;
+    transition: $transition-02;
   }
 }
 
